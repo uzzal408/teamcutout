@@ -1,132 +1,686 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
 
-        <title>Laravel</title>
 
-        <!-- Fonts -->
-        <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('frontend/uploads/2016/07/icon.png') }}">
+    <link rel="apple-touch-icon" href="{{ asset('frontend/uploads/2016/07/icon.png') }}" />
+    <title>Team Cut Out Int. | </title>
+    <style type="text/css">
+        img.wp-smiley,
+        img.emoji {
+            display: inline !important;
+            border: none !important;
+            box-shadow: none !important;
+            height: 1em !important;
+            width: 1em !important;
+            margin: 0 .07em !important;
+            vertical-align: -0.1em !important;
+            background: none !important;
+            padding: 0 !important;
+        }
+    </style>
+    <link rel='stylesheet' id='mxmtzc_font_awesome-css'  href='{{ asset('frontend/plugins/mx-time-zone-clocks/assets/font-awesome-4.6.3/css/font-awesome.min8fc0.css?ver=4.6.23') }}' type='text/css' media='all' />
+    <link rel='stylesheet' id='mxmtzc_style-css'  href="{{ asset('frontend/plugins/mx-time-zone-clocks/includes/frontend/assets/css/styledc8c.css?ver=2.2') }}" type='text/css' media='all' />
+    <link rel='stylesheet' id='rs-plugin-settings-css'  href='{{ asset('frontend/plugins/revslider/public/assets/css/rs6b5e1.css?ver=6.1.5') }}' type='text/css' media='all' />
+    <style id='rs-plugin-settings-inline-css' type='text/css'>
+        #rs-demo-id {}
+    </style>
+    <link rel='stylesheet' id='mediaelement-css'  href='{{ asset('frontend/js/mediaelement/mediaelementplayer.min51cd.css?ver=2.22.0') }}' type='text/css' media='all' />
+    <link rel='stylesheet' id='wp-mediaelement-css'  href='{{ asset('frontend/js/mediaelement/wp-mediaelement.min8fc0.css?ver=4.6.23') }}' type='text/css' media='all' />
+    <link rel='stylesheet' id='bridge-default-style-css'  href='{{ asset('frontend/themes/bridge/style8fc0.css?ver=4.6.23') }}' type='text/css' media='all' />
+    <link rel='stylesheet' id='bridge-qode-font_awesome-css'  href='{{ asset('frontend/themes/bridge/css/font-awesome/css/font-awesome.min8fc0.css?ver=4.6.23') }}' type='text/css' media='all' />
+    <link rel='stylesheet' id='bridge-qode-font_elegant-css'  href='{{ asset('frontend/themes/bridge/css/elegant-icons/style.min8fc0.css?ver=4.6.23') }}' type='text/css' media='all' />
+    <link rel='stylesheet' id='bridge-qode-linea_icons-css'  href='{{ asset('frontend/themes/bridge/css/linea-icons/style8fc0.css?ver=4.6.23') }}' type='text/css' media='all' />
+    <link rel='stylesheet' id='bridge-qode-dripicons-css'  href="{{ asset('frontend/themes/bridge/css/dripicons/dripicons8fc0.css?ver=4.6.23') }}" type='text/css' media='all' />
+    <link rel='stylesheet' id='bridge-qode-kiko-css'  href="{{ asset('frontend/themes/bridge/css/kiko/kiko-all8fc0.css?ver=4.6.23') }}" type='text/css' media='all' />
+    <link rel='stylesheet' id='bridge-stylesheet-css'  href="{{ asset('frontend/themes/bridge/css/stylesheet.min8fc0.css?ver=4.6.23') }}" type='text/css' media='all' />
+    <style id='bridge-stylesheet-inline-css' type='text/css'>
+        .page-id-294 .content > .content_inner > .container, .page-id-294 .content > .content_inner > .full_width { background-color: #ffffff;}
 
-        <!-- Styles -->
-        <style>
-            /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}a{background-color:transparent}[hidden]{display:none}html{font-family:system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;line-height:1.5}*,:after,:before{box-sizing:border-box;border:0 solid #e2e8f0}a{color:inherit;text-decoration:inherit}svg,video{display:block;vertical-align:middle}video{max-width:100%;height:auto}.bg-white{--bg-opacity:1;background-color:#fff;background-color:rgba(255,255,255,var(--bg-opacity))}.bg-gray-100{--bg-opacity:1;background-color:#f7fafc;background-color:rgba(247,250,252,var(--bg-opacity))}.border-gray-200{--border-opacity:1;border-color:#edf2f7;border-color:rgba(237,242,247,var(--border-opacity))}.border-t{border-top-width:1px}.flex{display:flex}.grid{display:grid}.hidden{display:none}.items-center{align-items:center}.justify-center{justify-content:center}.font-semibold{font-weight:600}.h-5{height:1.25rem}.h-8{height:2rem}.h-16{height:4rem}.text-sm{font-size:.875rem}.text-lg{font-size:1.125rem}.leading-7{line-height:1.75rem}.mx-auto{margin-left:auto;margin-right:auto}.ml-1{margin-left:.25rem}.mt-2{margin-top:.5rem}.mr-2{margin-right:.5rem}.ml-2{margin-left:.5rem}.mt-4{margin-top:1rem}.ml-4{margin-left:1rem}.mt-8{margin-top:2rem}.ml-12{margin-left:3rem}.-mt-px{margin-top:-1px}.max-w-6xl{max-width:72rem}.min-h-screen{min-height:100vh}.overflow-hidden{overflow:hidden}.p-6{padding:1.5rem}.py-4{padding-top:1rem;padding-bottom:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.pt-8{padding-top:2rem}.fixed{position:fixed}.relative{position:relative}.top-0{top:0}.right-0{right:0}.shadow{box-shadow:0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px 0 rgba(0,0,0,.06)}.text-center{text-align:center}.text-gray-200{--text-opacity:1;color:#edf2f7;color:rgba(237,242,247,var(--text-opacity))}.text-gray-300{--text-opacity:1;color:#e2e8f0;color:rgba(226,232,240,var(--text-opacity))}.text-gray-400{--text-opacity:1;color:#cbd5e0;color:rgba(203,213,224,var(--text-opacity))}.text-gray-500{--text-opacity:1;color:#a0aec0;color:rgba(160,174,192,var(--text-opacity))}.text-gray-600{--text-opacity:1;color:#718096;color:rgba(113,128,150,var(--text-opacity))}.text-gray-700{--text-opacity:1;color:#4a5568;color:rgba(74,85,104,var(--text-opacity))}.text-gray-900{--text-opacity:1;color:#1a202c;color:rgba(26,32,44,var(--text-opacity))}.underline{text-decoration:underline}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.w-5{width:1.25rem}.w-8{width:2rem}.w-auto{width:auto}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}@media (min-width:640px){.sm\:rounded-lg{border-radius:.5rem}.sm\:block{display:block}.sm\:items-center{align-items:center}.sm\:justify-start{justify-content:flex-start}.sm\:justify-between{justify-content:space-between}.sm\:h-20{height:5rem}.sm\:ml-0{margin-left:0}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:pt-0{padding-top:0}.sm\:text-left{text-align:left}.sm\:text-right{text-align:right}}@media (min-width:768px){.md\:border-t-0{border-top-width:0}.md\:border-l{border-left-width:1px}.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (min-width:1024px){.lg\:px-8{padding-left:2rem;padding-right:2rem}}@media (prefers-color-scheme:dark){.dark\:bg-gray-800{--bg-opacity:1;background-color:#2d3748;background-color:rgba(45,55,72,var(--bg-opacity))}.dark\:bg-gray-900{--bg-opacity:1;background-color:#1a202c;background-color:rgba(26,32,44,var(--bg-opacity))}.dark\:border-gray-700{--border-opacity:1;border-color:#4a5568;border-color:rgba(74,85,104,var(--border-opacity))}.dark\:text-white{--text-opacity:1;color:#fff;color:rgba(255,255,255,var(--text-opacity))}.dark\:text-gray-400{--text-opacity:1;color:#cbd5e0;color:rgba(203,213,224,var(--text-opacity))}.dark\:text-gray-500{--tw-text-opacity:1;color:#6b7280;color:rgba(107,114,128,var(--tw-text-opacity))}}
-        </style>
+        .page-id-294.disabled_footer_top .footer_top_holder, .page-id-294.disabled_footer_bottom .footer_bottom_holder { display: none;}
 
-        <style>
-            body {
-                font-family: 'Nunito', sans-serif;
-            }
-        </style>
-    </head>
-    <body class="antialiased">
-        <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
-            @if (Route::has('login'))
-                <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                    @auth
-                        <a href="{{ url('/home') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Home</a>
-                    @else
-                        <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
 
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
-                        @endif
-                    @endauth
+    </style>
+    <link rel='stylesheet' id='bridge-print-css'  href="{{ asset('frontend/themes/bridge/css/print8fc0.css?ver=4.6.23') }}" type='text/css' media='all' />
+    <link rel='stylesheet' id='bridge-style-dynamic-css'  href={{ asset('frontend/themes/bridge/css/style_dynamice6f2.css?ver=1586272495') }} type='text/css' media='all' />
+    <link rel='stylesheet' id='bridge-responsive-css'  href={{ asset('frontend/themes/bridge/css/responsive.min8fc0.css?ver=4.6.23') }} type='text/css' media='all' />
+    <link rel='stylesheet' id='bridge-style-dynamic-responsive-css'  href={{ asset('frontend/themes/bridge/css/style_dynamic_responsivee6f2.css?ver=1586272495') }} type='text/css' media='all' />
+    <link rel='stylesheet' id='js_composer_front-css'  href={{ asset('frontend/plugins/js_composer/assets/css/js_composer.min9b2d.css?ver=6.1') }} type='text/css' media='all' />
+    <link rel='stylesheet' id='bridge-style-handle-google-fonts-css'  href='../fonts.googleapis.com/css90fd.css?family=Raleway%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900%2C100italic%2C300italic%2C400italic%2C700italic&amp;subset=latin%2Clatin-ext&amp;ver=1.0.0' type='text/css' media='all' />
+    <link rel='stylesheet' id='bridge-core-dashboard-style-css'  href='{{ asset('frontend/plugins/bridge-core/modules/core-dashboard/assets/css/core-dashboard.min8fc0.css?ver=4.6.23') }}' type='text/css' media='all' />
+    <script type='text/javascript' src="{{ asset('frontend/js/jquery/jqueryb8ff.js?ver=1.12.4') }}"></script>
+    <script type='text/javascript' src='{{ asset('frontend/js/jquery/jquery-migrate.min330a.js?ver=1.4.1') }}'></script>
+    <script type='text/javascript' src={{ asset('frontend/plugins/mx-time-zone-clocks/includes/frontend/assets/js/scriptdc8c.js?ver=2.2') }}></script>
+    <script type='text/javascript' src="{{ asset('frontend/plugins/mx-time-zone-clocks/includes/frontend/assets/js/jquery.canvasClockdc8c.js?ver=2.2') }}"></script>
+    <script type='text/javascript' src="{{ asset('frontend/plugins/revslider/public/assets/js/revolution.tools.minf049.js?ver=6.0') }}"></script>
+    <script type='text/javascript' src="{{ asset('frontend/plugins/revslider/public/assets/js/rs6.minb5e1.js?ver=6.1.5') }}"></script>
+{{--    <link rel='https://api.w.org/' href='wp-json/index.html' />--}}
+{{--    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc0db0.php?rsd" />--}}
+{{--    <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="wp-includes/wlwmanifest.html" />--}}
+{{--    <meta name="generator" content="WordPress 4.6.23" />--}}
+{{--    <link rel="canonical" href="index.html" />--}}
+{{--    <link rel='shortlink' href='index.html' />--}}
+{{--    <link rel="alternate" type="application/json+oembed" href="wp-json/oembed/1.0/embed96d0.json?url=https%3A%2F%2Fwww.skillgraphics.biz%2F" />--}}
+{{--    <link rel="alternate" type="text/xml+oembed" href="wp-json/oembed/1.0/embed0ff1?url=https%3A%2F%2Fwww.skillgraphics.biz%2F&amp;format=xml" />--}}
+{{--    <meta name="generator" content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress."/>--}}
+{{--    <meta name="generator" content="Powered by Slider Revolution 6.1.5 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface." />--}}
+{{--    <script type="text/javascript">function setREVStartSize(t){try{var h,e=document.getElementById(t.c).parentNode.offsetWidth;if(e=0===e||isNaN(e)?window.innerWidth:e,t.tabw=void 0===t.tabw?0:parseInt(t.tabw),t.thumbw=void 0===t.thumbw?0:parseInt(t.thumbw),t.tabh=void 0===t.tabh?0:parseInt(t.tabh),t.thumbh=void 0===t.thumbh?0:parseInt(t.thumbh),t.tabhide=void 0===t.tabhide?0:parseInt(t.tabhide),t.thumbhide=void 0===t.thumbhide?0:parseInt(t.thumbhide),t.mh=void 0===t.mh||""==t.mh||"auto"===t.mh?0:parseInt(t.mh,0),"fullscreen"===t.layout||"fullscreen"===t.l)h=Math.max(t.mh,window.innerHeight);else{for(var i in t.gw=Array.isArray(t.gw)?t.gw:[t.gw],t.rl)void 0!==t.gw[i]&&0!==t.gw[i]||(t.gw[i]=t.gw[i-1]);for(var i in t.gh=void 0===t.el||""===t.el||Array.isArray(t.el)&&0==t.el.length?t.gh:t.el,t.gh=Array.isArray(t.gh)?t.gh:[t.gh],t.rl)void 0!==t.gh[i]&&0!==t.gh[i]||(t.gh[i]=t.gh[i-1]);var r,a=new Array(t.rl.length),n=0;for(var i in t.tabw=t.tabhide>=e?0:t.tabw,t.thumbw=t.thumbhide>=e?0:t.thumbw,t.tabh=t.tabhide>=e?0:t.tabh,t.thumbh=t.thumbhide>=e?0:t.thumbh,t.rl)a[i]=t.rl[i]<window.innerWidth?0:t.rl[i];for(var i in r=a[0],a)r>a[i]&&0<a[i]&&(r=a[i],n=i);var d=e>t.gw[n]+t.tabw+t.thumbw?1:(e-(t.tabw+t.thumbw))/t.gw[n];h=t.gh[n]*d+(t.tabh+t.thumbh)}void 0===window.rs_init_css&&(window.rs_init_css=document.head.appendChild(document.createElement("style"))),document.getElementById(t.c).height=h,window.rs_init_css.innerHTML+="#"+t.c+"_wrapper { height: "+h+"px }"}catch(t){console.log("Failure at Presize of Slider:"+t)}};</script>--}}
+{{--    <style type="text/css" data-type="vc_shortcodes-custom-css">.vc_custom_1586273171286{padding-top: 50px !important;padding-bottom: 66px !important;}.vc_custom_1586278808831{padding-bottom: 50px !important;}.vc_custom_1586273290837{padding-top: 150px !important;}.vc_custom_1586273290837{padding-top: 150px !important;}.vc_custom_1586187024825{padding-top: 50px !important;padding-bottom: 30px !important;}.vc_custom_1586187024825{padding-top: 50px !important;padding-bottom: 30px !important;}.vc_custom_1586273422130{padding-bottom: 0px !important;background-color: #ffffff !important;}.vc_custom_1586273393897{padding-top: 0px !important;background-color: #ffffff !important;}.vc_custom_1586271340113{padding-top: 50px !important;}.vc_custom_1586184883660{padding-top: 10px !important;padding-bottom: 10px !important;}.vc_custom_1523537064983{padding-top: 7px !important;padding-bottom: 63px !important;}.vc_custom_1523537407628{padding-right: 5% !important;padding-left: 5% !important;}.vc_custom_1523537413472{padding-right: 5% !important;padding-left: 5% !important;}.vc_custom_1523537419376{padding-right: 5% !important;padding-left: 5% !important;}.vc_custom_1523537064983{padding-top: 7px !important;padding-bottom: 63px !important;}.vc_custom_1523537407628{padding-right: 5% !important;padding-left: 5% !important;}.vc_custom_1523537413472{padding-right: 5% !important;padding-left: 5% !important;}.vc_custom_1523537419376{padding-right: 5% !important;padding-left: 5% !important;}.vc_custom_1586184621963{margin-left: 50px !important;}.vc_custom_1586184796860{margin-right: 50px !important;}.vc_custom_1586184870259{margin-right: 60px !important;}</style><noscript><style> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript></head>--}}
+
+<body class="home page page-id-294 page-template-default bridge-core-2.0.9  qode-title-hidden qode-theme-ver-19.6 qode-theme-bridge disabled_footer_top disabled_footer_bottom qode_header_in_grid wpb-js-composer js-comp-ver-6.1 vc_responsive" itemscope itemtype="http://schema.org/WebPage">
+
+
+
+
+<div class="wrapper">
+    <div class="wrapper_inner">
+        @include('frontend/include/nav')
+        <a id="back_to_top" href="#">
+            <span class="fa-stack">
+                <i class="qode_icon_font_awesome fa fa-arrow-up"></i>
+            </span>
+        </a>
+        <div class="content content_top_margin">
+            <div class="content_inner">
+                <div class="container" style='background-color:#ffffff'>
+                    <div class="container_inner default_template_holder clearfix page_container_inner" >
+                        <div   data-q_id="#About"class="vc_row wpb_row section vc_row-fluid  vc_custom_1586273171286 grid_section" style=' text-align:center;'>
+                            <div class=" section_inner clearfix">
+                                <div class='section_inner_margin clearfix'>
+                                    <div class="wpb_column vc_column_container vc_col-sm-12">
+                                        <div class="vc_column-inner">
+                                            <div class="wpb_wrapper">
+                                                <div class="wpb_text_column wpb_content_element ">
+                                                    <div class="wpb_wrapper">
+                                                        <h1>KEEP THE CLIENT DELIGHTED</h1>
+                                                    </div>
+                                                </div>
+                                                <div class="vc_empty_space"  style="height: 20px" ><span
+                                                        class="vc_empty_space_inner">
+			<span class="empty_space_image"  ></span>
+		</span></div>
+
+
+                                                <div class="wpb_text_column wpb_content_element ">
+                                                    <div class="wpb_wrapper">
+                                                        <h4>SkillGraphics is a Professional Image Post Production Company with its main studio located in Dhaka, Bangladesh (GMT+6). We provide services to help reduce the cost of image post-production for web shops/e-commerce, Photography, Fashion, Advertising and Digital Marketing Agencies, A pool of experienced professional is always ready to provide service for any Image Post Production.</h4>
+
+                                                    </div>
+                                                </div> <div      class="vc_row wpb_row section vc_row-fluid vc_inner " style=' text-align:center;'><div class=" full_section_inner clearfix"><div class="wpb_column vc_column_container vc_col-sm-12 vc_col-md-4"><div class="vc_column-inner"><div class="wpb_wrapper"><div class='q_icon_with_title medium custom_icon_image center qode_iwt_hover_enabled '><div class="icon_holder " style=" "><img itemprop="image" style="" src="wp-content/uploads/2020/04/Satisfaction.png" alt=""></div><div class="icon_text_holder" style=""><div class="icon_text_inner" style=""><h3 class="icon_title" style="color: #bb009b;">Customer Satisfaction</h3><p style=''>Customers Satisfaction is our main priority, we deliver the processed images the way the customers want them to be delivered.</p></div></div></div><div class='q_icon_with_title medium custom_icon_image center qode_iwt_hover_enabled '><div class="icon_holder " style=" "><img itemprop="image" style="" src="wp-content/uploads/2020/04/HR.png" alt=""></div><div class="icon_text_holder" style=""><div class="icon_text_inner" style=""><h3 class="icon_title" style="color: #bb009b;">Proficient Human Resources</h3><p style=''>No matter how complex the task is we have a wide range of professionals to server. Moreover, continues improvement through training takes place round the year.</p></div></div></div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-12 vc_col-md-4"><div class="vc_column-inner"><div class="wpb_wrapper"><div class='q_icon_with_title medium custom_icon_image center qode_iwt_hover_enabled '><div class="icon_holder " style=" "><img itemprop="image" style="" src="wp-content/uploads/2020/04/1524671.png" alt=""></div><div class="icon_text_holder" style=""><div class="icon_text_inner" style=""><h3 class="icon_title" style="color: #bb009b;">On Time Delivery</h3><p style=''>Time saves money, especially in the business we operate. Every delivery is ensured at least one hour prior to the agreed deadline.</p></div></div></div><div class='q_icon_with_title medium custom_icon_image center qode_iwt_hover_enabled '><div class="icon_holder " style=" "><img itemprop="image" style="" src="wp-content/uploads/2020/04/Follow-up.png" alt=""></div><div class="icon_text_holder" style=""><div class="icon_text_inner" style=""><h3 class="icon_title" style="color: #bb009b;">Timely Follow-Up</h3><p style=''>From image receive to upload the customers are notified by email, IM or SMS in every stage of the work e.g. Receipt of Image, Status of Production Status of Quality Control(QC) Final Check, Upload, Completion of Upload.</p></div></div></div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-12 vc_col-md-4"><div class="vc_column-inner"><div class="wpb_wrapper"><div class='q_icon_with_title medium custom_icon_image center qode_iwt_hover_enabled '><div class="icon_holder " style=" "><img itemprop="image" style="" src="wp-content/uploads/2020/04/Service.png" alt=""></div><div class="icon_text_holder" style=""><div class="icon_text_inner" style=""><h3 class="icon_title" style="color: #bb009b;">Round the Clock Service</h3><p style=''>As we work 24/6, order can be placed any time of the day and can be completed and uploaded within required timeline.</p></div></div></div><div class='q_icon_with_title medium custom_icon_image center qode_iwt_hover_enabled '><div class="icon_holder " style=" "><img itemprop="image" style="" src="wp-content/uploads/2020/04/Customized.png" alt=""></div><div class="icon_text_holder" style=""><div class="icon_text_inner" style=""><h3 class="icon_title" style="color: #bb009b;">Customized Services</h3><p style=''>Every customer has their own requirement and preference. Our service is delivered keeping in consideration the variety of preferences.</p></div></div></div></div></div></div></div></div></div></div></div></div></div></div>
+                        <div   class="vc_row wpb_row section vc_row-fluid  vc_custom_1586278808831" style=' text-align:left;'>
+                            <div class=" full_section_inner clearfix">
+                                <div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper">
+                                            <div class="wpb_text_column wpb_content_element ">
+                                                <div class="wpb_wrapper">
+                                                    <h1 style="text-align: center;">INFRASTRUCTURE &amp; RESOURCES</h1>
+
+                                                </div>
+                                            </div> 	<div class="vc_empty_space"  style="height: 20px" ><span
+                                                    class="vc_empty_space_inner">
+			<span class="empty_space_image"  ></span>
+		</span></div>
+
+                                            <div      class="vc_row wpb_row section vc_row-fluid vc_inner " style=' text-align:left;'><div class=" full_section_inner clearfix"><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner"><div class="wpb_wrapper"><div class='q_icon_with_title medium custom_icon_image center qode_iwt_hover_enabled '><div class="icon_holder " style=" "><img itemprop="image" style="" src="wp-content/uploads/2020/04/1.-DAILY_PRODUCTION.png" alt=""></div><div class="icon_text_holder" style=""><div class="icon_text_inner" style=""><h3 class="icon_title" style="color: #800080;"></h3><p style=''></p></div></div></div><div class='service_table_holder'><ul class='service_table_inner'><li class='service_table_title_holder background_color_type' style=''><div class='service_table_title_inner'><div class='service_table_title_inner2'><h3 class='service_title' style='color: #bb009b;'>Daily Production</h3></div></div></li><li class='service_table_content' style=''></p>
+                                                                            <ul>
+                                                                                <li>
+                                                                                    <h6>Clipping: 2000-2500 Images.</h6>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <h6>Shadowing: 1000-1500 Images.</h6>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <h6>Ghost Retouching: 800-1200 Images.</h6>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <h6>Coloring: 500-1000 Images.</h6>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <h6>Masking: 100-150 Images.</h6>
+                                                                                </li>
+                                                                            </ul>
+                                                                            <p></li></ul></div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner"><div class="wpb_wrapper"><div class='q_icon_with_title medium custom_icon_image center qode_iwt_hover_enabled '><div class="icon_holder " style=" "><img itemprop="image" style="" src="wp-content/uploads/2020/04/2.-SERVER_WORKSTATION.png" alt=""></div><div class="icon_text_holder" style=""><div class="icon_text_inner" style=""><h3 class="icon_title" style="color: #800080;"></h3><p style=''></p></div></div></div><div class='service_table_holder'><ul class='service_table_inner'><li class='service_table_title_holder background_color_type' style=''><div class='service_table_title_inner'><div class='service_table_title_inner2'><h3 class='service_title' style='color: #bb009b;'>Software Connectivity</h3></div></div></li><li class='service_table_content' style=''></p>
+                                                                            <ul>
+                                                                                <li>
+                                                                                    <h6>Photoshop CC,</h6>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <h6>Lightroom CC</h6>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <h6>Photoshop CS6,</h6>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <h6>Illustrator CC</h6>
+                                                                                </li>
+                                                                            </ul>
+                                                                            <p></li></ul></div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner"><div class="wpb_wrapper"><div class='q_icon_with_title medium custom_icon_image center qode_iwt_hover_enabled '><div class="icon_holder " style=" "><img itemprop="image" style="" src="wp-content/uploads/2020/04/3.-SOFTWARE_-CONNECTIVITY.png" alt=""></div><div class="icon_text_holder" style=""><div class="icon_text_inner" style=""><h3 class="icon_title" style="color: #800080;"></h3><p style=''></p></div></div></div><div class='service_table_holder'><ul class='service_table_inner'><li class='service_table_title_holder background_color_type' style=''><div class='service_table_title_inner'><div class='service_table_title_inner2'><h3 class='service_title' style='color: #bb009b;'>Server Workstation</h3></div></div></li><li class='service_table_content' style=''></p>
+                                                                            <ul>
+                                                                                <li>
+                                                                                    <h6>2 FTP Server (Linux)</h6>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <h6>6 Local File Server (Linux)</h6>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <h6>Internet Connection 3&#215;100 Mbps</h6>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <h6>200+ Workstation.</h6>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <h6>Power Backup 2</h6>
+                                                                                </li>
+                                                                            </ul>
+                                                                            <p></li></ul></div></div></div></div></div></div>	<div class="vc_empty_space"  style="height: 50px" ><span
+                                                    class="vc_empty_space_inner">
+			<span class="empty_space_image"  ></span>
+		</span></div>
+
+                                        </div></div></div></div></div><section   data-q_id="#Services"    data-speed="1" class="parallax_section_holder  " style = " height:px; background-image:url('');"><div class="parallax_content left"><div class='parallax_section_inner_margin clearfix'><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper">
+                                                <div class="wpb_text_column wpb_content_element ">
+                                                    <div class="wpb_wrapper">
+                                                        <h1 style="text-align: center;">Check Out Our Services</h1>
+
+                                                    </div>
+                                                </div> 	<div class="vc_empty_space"  style="height: 50px" ><span
+                                                        class="vc_empty_space_inner">
+			<span class="empty_space_image"  ></span>
+		</span></div>
+
+                                                <div      class="vc_row wpb_row section vc_row-fluid vc_inner  vc_custom_1523537064983" style=' text-align:left;'><div class=" full_section_inner clearfix"><div class="wpb_column vc_column_container vc_col-sm-12 vc_col-md-4"><div class="vc_column-inner vc_custom_1523537407628"><div class="wpb_wrapper"><div class='q_elements_holder one_column responsive_mode_from_768' ><div class='q_elements_item ' data-animation='no' data-item-class='q_elements_holder_custom_391024'><div class='q_elements_item_inner'><div class='q_elements_item_content q_elements_holder_custom_391024'><div class="qode-comparison-slider qode-comparison-slider-light" data-orientation="horizontal" data-offset="50">
+                                                                                        <img width="1220" height="640" src="wp-content/uploads/2016/01/service-backround-4.jpg" class="attachment-full size-full" alt="service backround 4" srcset="https://www.skillgraphics.biz/wp-content/uploads/2016/01/service-backround-4.jpg 1220w, https://www.skillgraphics.biz/wp-content/uploads/2016/01/service-backround-4-300x157.jpg 300w, https://www.skillgraphics.biz/wp-content/uploads/2016/01/service-backround-4-768x403.jpg 768w, https://www.skillgraphics.biz/wp-content/uploads/2016/01/service-backround-4-1024x537.jpg 1024w, https://www.skillgraphics.biz/wp-content/uploads/2016/01/service-backround-4-260x136.jpg 260w, https://www.skillgraphics.biz/wp-content/uploads/2016/01/service-backround-4-50x26.jpg 50w, https://www.skillgraphics.biz/wp-content/uploads/2016/01/service-backround-4-143x75.jpg 143w" sizes="(max-width: 1220px) 100vw, 1220px" />        <img width="1220" height="640" src="wp-content/uploads/2016/01/service-backround-4-1.jpg" class="attachment-full size-full" alt="service backround 4" srcset="https://www.skillgraphics.biz/wp-content/uploads/2016/01/service-backround-4-1.jpg 1220w, https://www.skillgraphics.biz/wp-content/uploads/2016/01/service-backround-4-1-300x157.jpg 300w, https://www.skillgraphics.biz/wp-content/uploads/2016/01/service-backround-4-1-768x403.jpg 768w, https://www.skillgraphics.biz/wp-content/uploads/2016/01/service-backround-4-1-1024x537.jpg 1024w, https://www.skillgraphics.biz/wp-content/uploads/2016/01/service-backround-4-1-260x136.jpg 260w, https://www.skillgraphics.biz/wp-content/uploads/2016/01/service-backround-4-1-50x26.jpg 50w, https://www.skillgraphics.biz/wp-content/uploads/2016/01/service-backround-4-1-143x75.jpg 143w" sizes="(max-width: 1220px) 100vw, 1220px" />    </div>	<div class="vc_empty_space"  style="height: 20px" ><span
+                                                                                            class="vc_empty_space_inner">
+			<span class="empty_space_image"  ></span>
+		</span></div>
+
+
+                                                                                    <div class="wpb_text_column wpb_content_element ">
+                                                                                        <div class="wpb_wrapper">
+                                                                                            <h3></h3>
+                                                                                            <h3 style="text-align: center;">Clipping Path</h3>
+
+                                                                                        </div>
+                                                                                    </div> 	<div class="vc_empty_space"  style="height: 70px" ><span
+                                                                                            class="vc_empty_space_inner">
+			<span class="empty_space_image"  ></span>
+		</span></div>
+
+                                                                                </div></div></div></div><div class='q_elements_holder one_column responsive_mode_from_768' ><div class='q_elements_item ' data-animation='no' data-item-class='q_elements_holder_custom_690221'><div class='q_elements_item_inner'><div class='q_elements_item_content q_elements_holder_custom_690221'><div class="qode-comparison-slider qode-comparison-slider-light" data-orientation="horizontal" data-offset="50">
+                                                                                        <img width="665" height="350" src="wp-content/uploads/2020/04/3.Before.png" class="attachment-full size-full" alt="3.Before" srcset="https://www.skillgraphics.biz/wp-content/uploads/2020/04/3.Before.png 665w, https://www.skillgraphics.biz/wp-content/uploads/2020/04/3.Before-300x158.png 300w" sizes="(max-width: 665px) 100vw, 665px" />        <img width="665" height="350" src="wp-content/uploads/2020/04/3.after_.png" class="attachment-full size-full" alt="3.after_" srcset="https://www.skillgraphics.biz/wp-content/uploads/2020/04/3.after_.png 665w, https://www.skillgraphics.biz/wp-content/uploads/2020/04/3.after_-300x158.png 300w" sizes="(max-width: 665px) 100vw, 665px" />    </div>	<div class="vc_empty_space"  style="height: 20px" ><span
+                                                                                            class="vc_empty_space_inner">
+			<span class="empty_space_image"  ></span>
+		</span></div>
+
+
+                                                                                    <div class="wpb_text_column wpb_content_element ">
+                                                                                        <div class="wpb_wrapper">
+                                                                                            <h3 style="text-align: center;">Color Correction</h3>
+
+                                                                                        </div>
+                                                                                    </div> </div></div></div></div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-12 vc_col-md-4"><div class="vc_column-inner vc_custom_1523537413472"><div class="wpb_wrapper"><div class='q_elements_holder one_column responsive_mode_from_768' ><div class='q_elements_item ' data-animation='no' data-item-class='q_elements_holder_custom_227817'><div class='q_elements_item_inner'><div class='q_elements_item_content q_elements_holder_custom_227817'><div class="qode-comparison-slider qode-comparison-slider-light" data-orientation="horizontal" data-offset="50">
+                                                                                        <img width="665" height="350" src="wp-content/uploads/2020/04/4.before.png" class="attachment-full size-full" alt="4.before" srcset="https://www.skillgraphics.biz/wp-content/uploads/2020/04/4.before.png 665w, https://www.skillgraphics.biz/wp-content/uploads/2020/04/4.before-300x158.png 300w" sizes="(max-width: 665px) 100vw, 665px" />        <img width="665" height="350" src="wp-content/uploads/2020/04/4.after_.png" class="attachment-full size-full" alt="4.after_" srcset="https://www.skillgraphics.biz/wp-content/uploads/2020/04/4.after_.png 665w, https://www.skillgraphics.biz/wp-content/uploads/2020/04/4.after_-300x158.png 300w" sizes="(max-width: 665px) 100vw, 665px" />    </div>	<div class="vc_empty_space"  style="height: 20px" ><span
+                                                                                            class="vc_empty_space_inner">
+			<span class="empty_space_image"  ></span>
+		</span></div>
+
+
+                                                                                    <div class="wpb_text_column wpb_content_element ">
+                                                                                        <div class="wpb_wrapper">
+                                                                                            <h3 style="text-align: center;">Retouching</h3>
+
+                                                                                        </div>
+                                                                                    </div> 	<div class="vc_empty_space"  style="height: 70px" ><span
+                                                                                            class="vc_empty_space_inner">
+			<span class="empty_space_image"  ></span>
+		</span></div>
+
+                                                                                </div></div></div></div><div class='q_elements_holder one_column responsive_mode_from_768' ><div class='q_elements_item ' data-animation='no' data-item-class='q_elements_holder_custom_864735'><div class='q_elements_item_inner'><div class='q_elements_item_content q_elements_holder_custom_864735'><div class="qode-comparison-slider qode-comparison-slider-light" data-orientation="horizontal" data-offset="50">
+                                                                                        <img width="1220" height="640" src="wp-content/uploads/2016/05/before.jpg" class="attachment-full size-full" alt="before" srcset="https://www.skillgraphics.biz/wp-content/uploads/2016/05/before.jpg 1220w, https://www.skillgraphics.biz/wp-content/uploads/2016/05/before-300x157.jpg 300w, https://www.skillgraphics.biz/wp-content/uploads/2016/05/before-768x403.jpg 768w, https://www.skillgraphics.biz/wp-content/uploads/2016/05/before-1024x537.jpg 1024w, https://www.skillgraphics.biz/wp-content/uploads/2016/05/before-260x136.jpg 260w, https://www.skillgraphics.biz/wp-content/uploads/2016/05/before-50x26.jpg 50w, https://www.skillgraphics.biz/wp-content/uploads/2016/05/before-143x75.jpg 143w" sizes="(max-width: 1220px) 100vw, 1220px" />        <img width="1220" height="640" src="wp-content/uploads/2016/05/after.jpg" class="attachment-full size-full" alt="after" srcset="https://www.skillgraphics.biz/wp-content/uploads/2016/05/after.jpg 1220w, https://www.skillgraphics.biz/wp-content/uploads/2016/05/after-300x157.jpg 300w, https://www.skillgraphics.biz/wp-content/uploads/2016/05/after-768x403.jpg 768w, https://www.skillgraphics.biz/wp-content/uploads/2016/05/after-1024x537.jpg 1024w, https://www.skillgraphics.biz/wp-content/uploads/2016/05/after-260x136.jpg 260w, https://www.skillgraphics.biz/wp-content/uploads/2016/05/after-50x26.jpg 50w, https://www.skillgraphics.biz/wp-content/uploads/2016/05/after-143x75.jpg 143w" sizes="(max-width: 1220px) 100vw, 1220px" />    </div>	<div class="vc_empty_space"  style="height: 20px" ><span
+                                                                                            class="vc_empty_space_inner">
+			<span class="empty_space_image"  ></span>
+		</span></div>
+
+
+                                                                                    <div class="wpb_text_column wpb_content_element ">
+                                                                                        <div class="wpb_wrapper">
+                                                                                            <h3 style="text-align: center;">Neck Joint</h3>
+
+                                                                                        </div>
+                                                                                    </div> </div></div></div></div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-12 vc_col-md-4"><div class="vc_column-inner vc_custom_1523537419376"><div class="wpb_wrapper"><div class='q_elements_holder one_column responsive_mode_from_768' ><div class='q_elements_item ' data-animation='no' data-item-class='q_elements_holder_custom_561846'><div class='q_elements_item_inner'><div class='q_elements_item_content q_elements_holder_custom_561846'><div class="qode-comparison-slider qode-comparison-slider-light" data-orientation="horizontal" data-offset="50">
+                                                                                        <img width="1220" height="640" src="wp-content/uploads/2020/04/service-backround-3.jpg" class="attachment-full size-full" alt="service-backround-3" srcset="https://www.skillgraphics.biz/wp-content/uploads/2020/04/service-backround-3.jpg 1220w, https://www.skillgraphics.biz/wp-content/uploads/2020/04/service-backround-3-300x157.jpg 300w, https://www.skillgraphics.biz/wp-content/uploads/2020/04/service-backround-3-768x403.jpg 768w, https://www.skillgraphics.biz/wp-content/uploads/2020/04/service-backround-3-1024x537.jpg 1024w, https://www.skillgraphics.biz/wp-content/uploads/2020/04/service-backround-3-700x367.jpg 700w" sizes="(max-width: 1220px) 100vw, 1220px" />        <img width="1220" height="640" src="wp-content/uploads/2020/04/service-backround-3-1.jpg" class="attachment-full size-full" alt="service-backround-3-1" srcset="https://www.skillgraphics.biz/wp-content/uploads/2020/04/service-backround-3-1.jpg 1220w, https://www.skillgraphics.biz/wp-content/uploads/2020/04/service-backround-3-1-300x157.jpg 300w, https://www.skillgraphics.biz/wp-content/uploads/2020/04/service-backround-3-1-768x403.jpg 768w, https://www.skillgraphics.biz/wp-content/uploads/2020/04/service-backround-3-1-1024x537.jpg 1024w, https://www.skillgraphics.biz/wp-content/uploads/2020/04/service-backround-3-1-700x367.jpg 700w" sizes="(max-width: 1220px) 100vw, 1220px" />    </div>	<div class="vc_empty_space"  style="height: 20px" ><span
+                                                                                            class="vc_empty_space_inner">
+			<span class="empty_space_image"  ></span>
+		</span></div>
+
+
+                                                                                    <div class="wpb_text_column wpb_content_element ">
+                                                                                        <div class="wpb_wrapper">
+                                                                                            <h3 style="text-align: center;">Shadow Making</h3>
+
+                                                                                        </div>
+                                                                                    </div> 	<div class="vc_empty_space"  style="height: 70px" ><span
+                                                                                            class="vc_empty_space_inner">
+			<span class="empty_space_image"  ></span>
+		</span></div>
+
+                                                                                </div></div></div></div><div class='q_elements_holder one_column responsive_mode_from_768' ><div class='q_elements_item ' data-animation='no' data-item-class='q_elements_holder_custom_977158'><div class='q_elements_item_inner'><div class='q_elements_item_content q_elements_holder_custom_977158'><div class="qode-comparison-slider qode-comparison-slider-light" data-orientation="horizontal" data-offset="50">
+                                                                                        <img width="1220" height="640" src="wp-content/uploads/2020/04/service-backround-5.jpg" class="attachment-full size-full" alt="service-backround-5" srcset="https://www.skillgraphics.biz/wp-content/uploads/2020/04/service-backround-5.jpg 1220w, https://www.skillgraphics.biz/wp-content/uploads/2020/04/service-backround-5-300x157.jpg 300w, https://www.skillgraphics.biz/wp-content/uploads/2020/04/service-backround-5-768x403.jpg 768w, https://www.skillgraphics.biz/wp-content/uploads/2020/04/service-backround-5-1024x537.jpg 1024w, https://www.skillgraphics.biz/wp-content/uploads/2020/04/service-backround-5-700x367.jpg 700w" sizes="(max-width: 1220px) 100vw, 1220px" />        <img width="1220" height="640" src="wp-content/uploads/2020/04/service-backround-5-1.jpg" class="attachment-full size-full" alt="service-backround-5-1" srcset="https://www.skillgraphics.biz/wp-content/uploads/2020/04/service-backround-5-1.jpg 1220w, https://www.skillgraphics.biz/wp-content/uploads/2020/04/service-backround-5-1-300x157.jpg 300w, https://www.skillgraphics.biz/wp-content/uploads/2020/04/service-backround-5-1-768x403.jpg 768w, https://www.skillgraphics.biz/wp-content/uploads/2020/04/service-backround-5-1-1024x537.jpg 1024w, https://www.skillgraphics.biz/wp-content/uploads/2020/04/service-backround-5-1-700x367.jpg 700w" sizes="(max-width: 1220px) 100vw, 1220px" />    </div>	<div class="vc_empty_space"  style="height: 20px" ><span
+                                                                                            class="vc_empty_space_inner">
+			<span class="empty_space_image"  ></span>
+		</span></div>
+
+
+                                                                                    <div class="wpb_text_column wpb_content_element ">
+                                                                                        <div class="wpb_wrapper">
+                                                                                            <h3 style="text-align: center;">Masking</h3>
+
+                                                                                        </div>
+                                                                                    </div> </div></div></div></div></div></div></div></div></div>	<div class="vc_empty_space"  style="height: 50px" ><span
+                                                        class="vc_empty_space_inner">
+			<span class="empty_space_image"  ></span>
+		</span></div>
+
+                                            </div></div></div></div></div></section><section   data-q_id="#Services"    data-speed="1" class="parallax_section_holder  " style = " height:px; background-image:url('');"><div class="parallax_content left"><div class='parallax_section_inner_margin clearfix'><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper">
+                                                <div class="wpb_text_column wpb_content_element ">
+                                                    <div class="wpb_wrapper">
+                                                        <h1 style="text-align: center;"><a href="http://mvrk.tv/vfx/" target="_blank">Check Out Our VFX Services</a></h1>
+
+                                                    </div>
+                                                </div> 	<div class="vc_empty_space"  style="height: 50px" ><span
+                                                        class="vc_empty_space_inner">
+			<span class="empty_space_image"  ></span>
+		</span></div>
+
+                                                <div class='q_elements_holder two_columns responsive_mode_from_768' ><div class='q_elements_item ' data-animation='no' data-item-class='q_elements_holder_custom_839382'><div class='q_elements_item_inner'><div class='q_elements_item_content q_elements_holder_custom_839382' style='padding:0px 40px'><div class="qode-comparison-slider qode-comparison-slider-light" data-orientation="horizontal" data-offset="50">
+                                                                    <img width="1277" height="898" src="wp-content/uploads/2018/04/xRotoscoping_before.jpg" class="attachment-full size-full" alt="xRotoscoping_before" srcset="https://www.skillgraphics.biz/wp-content/uploads/2018/04/xRotoscoping_before.jpg 1277w, https://www.skillgraphics.biz/wp-content/uploads/2018/04/xRotoscoping_before-300x211.jpg 300w, https://www.skillgraphics.biz/wp-content/uploads/2018/04/xRotoscoping_before-768x540.jpg 768w, https://www.skillgraphics.biz/wp-content/uploads/2018/04/xRotoscoping_before-1024x720.jpg 1024w, https://www.skillgraphics.biz/wp-content/uploads/2018/04/xRotoscoping_before-700x492.jpg 700w" sizes="(max-width: 1277px) 100vw, 1277px" />        <img width="1277" height="898" src="wp-content/uploads/2018/04/xRotoscoping_after.jpg" class="attachment-full size-full" alt="xRotoscoping_after" srcset="https://www.skillgraphics.biz/wp-content/uploads/2018/04/xRotoscoping_after.jpg 1277w, https://www.skillgraphics.biz/wp-content/uploads/2018/04/xRotoscoping_after-300x211.jpg 300w, https://www.skillgraphics.biz/wp-content/uploads/2018/04/xRotoscoping_after-768x540.jpg 768w, https://www.skillgraphics.biz/wp-content/uploads/2018/04/xRotoscoping_after-1024x720.jpg 1024w, https://www.skillgraphics.biz/wp-content/uploads/2018/04/xRotoscoping_after-700x492.jpg 700w" sizes="(max-width: 1277px) 100vw, 1277px" />    </div>	<div class="vc_empty_space"  style="height: 20px" ><span
+                                                                        class="vc_empty_space_inner">
+			<span class="empty_space_image"  ></span>
+		</span></div>
+
+                                                            </div></div></div></div><div      class="vc_row wpb_row section vc_row-fluid vc_inner  vc_custom_1523537064983" style=' text-align:left;'><div class=" full_section_inner clearfix"><div class="wpb_column vc_column_container vc_col-sm-12 vc_col-md-4"><div class="vc_column-inner vc_custom_1523537407628"><div class="wpb_wrapper"><div class='q_elements_holder one_column responsive_mode_from_768' ><div class='q_elements_item ' data-animation='no' data-item-class='q_elements_holder_custom_332943'><div class='q_elements_item_inner'><div class='q_elements_item_content q_elements_holder_custom_332943'>	<div class="vc_empty_space"  style="height: 20px" ><span
+                                                                                            class="vc_empty_space_inner">
+			<span class="empty_space_image"  ></span>
+		</span></div>
+
+
+                                                                                    <div class="wpb_text_column wpb_content_element ">
+                                                                                        <div class="wpb_wrapper">
+                                                                                            <h3 style="text-align: center;"><a href="http://mvrk.tv/vfx/" target="_blank">Rotoscoping</a></h3>
+
+                                                                                        </div>
+                                                                                    </div> </div></div></div></div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-12 vc_col-md-4"><div class="vc_column-inner vc_custom_1523537413472"><div class="wpb_wrapper"><div class='q_elements_holder one_column responsive_mode_from_768' ><div class='q_elements_item ' data-animation='no' data-item-class='q_elements_holder_custom_532717'><div class='q_elements_item_inner'><div class='q_elements_item_content q_elements_holder_custom_532717'>	<div class="vc_empty_space"  style="height: 20px" ><span
+                                                                                            class="vc_empty_space_inner">
+			<span class="empty_space_image"  ></span>
+		</span></div>
+
+
+                                                                                    <div class="wpb_text_column wpb_content_element ">
+                                                                                        <div class="wpb_wrapper">
+                                                                                            <h3 style="text-align: center;"><a href="http://mvrk.tv/vfx/" target="_blank">Paint</a></h3>
+
+                                                                                        </div>
+                                                                                    </div> </div></div></div></div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-12 vc_col-md-4"><div class="vc_column-inner vc_custom_1523537419376"><div class="wpb_wrapper"><div class='q_elements_holder one_column responsive_mode_from_768' ><div class='q_elements_item ' data-animation='no' data-item-class='q_elements_holder_custom_533304'><div class='q_elements_item_inner'><div class='q_elements_item_content q_elements_holder_custom_533304'>	<div class="vc_empty_space"  style="height: 20px" ><span
+                                                                                            class="vc_empty_space_inner">
+			<span class="empty_space_image"  ></span>
+		</span></div>
+
+
+                                                                                    <div class="wpb_text_column wpb_content_element ">
+                                                                                        <div class="wpb_wrapper">
+                                                                                            <h3 style="text-align: center;"><a href="http://mvrk.tv/vfx/" target="_blank">2D Tracking</a></h3>
+
+                                                                                        </div>
+                                                                                    </div> </div></div></div></div></div></div></div></div></div></div></div></div></div></div></section><div   data-q_id="#Portfolio"    class="vc_row wpb_row section vc_row-fluid  vc_custom_1586187024825 grid_section" style=' text-align:center;'><div class=" section_inner clearfix"><div class='section_inner_margin clearfix'><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper">
+                                                <div class="wpb_text_column wpb_content_element ">
+                                                    <div class="wpb_wrapper">
+                                                        <h1 style="text-align: center;"><a href="http://mvrk.tv/vfx/" target="_blank">Check Out Our VFX Work</a></h1>
+
+                                                    </div>
+                                                </div> 	<div class="vc_empty_space"  style="height: 20px" ><span
+                                                        class="vc_empty_space_inner">
+			<span class="empty_space_image"  ></span>
+		</span></div>
+
+                                                <div class='q_elements_holder two_columns responsive_mode_from_768' ><div class='q_elements_item ' data-animation='no' data-item-class='q_elements_holder_custom_129930'><div class='q_elements_item_inner'><div class='q_elements_item_content q_elements_holder_custom_129930' style='padding:40px'><div class="qode_video_box disabled_hover_overlay">
+                                                                    <a itemprop="image" class="qode_video_image" href="https://youtu.be/TtxRBc_qfeE" data-rel="prettyPhoto">
+
+                                                                        <img src="wp-content/uploads/2018/04/Screenshot_46.png" />
+                                                                        <span class="qode_video_box_button_holder">
+				<span class="qode_video_box_button">
+					<span class="qode_video_box_button_arrow">
+					</span>
+				</span>
+			</span>
+                                                                    </a>
+                                                                </div></div></div></div></div>	<div class="vc_empty_space"  style="height: 20px" ><span
+                                                        class="vc_empty_space_inner">
+			<span class="empty_space_image"  ></span>
+		</span></div>
+
+                                            </div></div></div></div></div></div><div   data-q_id="#Portfolio"    class="vc_row wpb_row section vc_row-fluid  vc_custom_1586187024825 grid_section" style=' text-align:center;'><div class=" section_inner clearfix"><div class='section_inner_margin clearfix'><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper">
+                                                <div class="wpb_text_column wpb_content_element ">
+                                                    <div class="wpb_wrapper">
+                                                        <h1>What Makes us Different</h1>
+
+                                                    </div>
+                                                </div> 	<div class="vc_empty_space"  style="height: 20px" ><span
+                                                        class="vc_empty_space_inner">
+			<span class="empty_space_image"  ></span>
+		</span></div>
+
+
+                                                <div class="wpb_text_column wpb_content_element ">
+                                                    <div class="wpb_wrapper">
+                                                        <h4>Quality, Commitment and Reliability . In order to ensure the reliability of our customers we have incorporated order management with integrated automated workflow management therefore guarantee timely delivery of any number of images without compromising the quality.</h4>
+
+                                                    </div>
+                                                </div> <div class='q_elements_holder two_columns responsive_mode_from_768' ><div class='q_elements_item ' data-animation='no' data-item-class='q_elements_holder_custom_987558'><div class='q_elements_item_inner'><div class='q_elements_item_content q_elements_holder_custom_987558' style='padding:40px'><div class="qode_video_box disabled_hover_overlay">
+                                                                    <a itemprop="image" class="qode_video_image" href="#" data-rel="prettyPhoto">
+
+                                                                        <img src="wp-content/uploads/2020/04/IMG_1256-1-scaled.jpg" />
+                                                                        <span class="qode_video_box_button_holder">
+				<span class="qode_video_box_button">
+					<span class="qode_video_box_button_arrow">
+					</span>
+				</span>
+			</span>
+                                                                    </a>
+                                                                </div></div></div></div><div class='q_elements_item ' data-animation='no' data-item-class='q_elements_holder_custom_862366'><div class='q_elements_item_inner'><div class='q_elements_item_content q_elements_holder_custom_862366' style='padding:0px 40px'><div class='q_progress_bar'><h3 class='progress_title_holder clearfix' style=''><span class='progress_title'><span>TurnAround</span></span><span class='progress_number' style='font-size: 13px;font-weight: 700;'><span>0</span>%</span></h3><div class='progress_content_outer' style='height: 10px;border-radius: 5px;-moz-border-radius: 5px;-webkit-border-radius: 5px;'><div data-percentage='90' class='progress_content' style='height: 10px;'></div></div></div><div class='q_progress_bar'><h3 class='progress_title_holder clearfix' style=''><span class='progress_title'><span>Quality</span></span><span class='progress_number' style='font-size: 13px;font-weight: 700;'><span>0</span>%</span></h3><div class='progress_content_outer' style='height: 10px;border-radius: 5px;-moz-border-radius: 5px;-webkit-border-radius: 5px;'><div data-percentage='100' class='progress_content' style='height: 10px;'></div></div></div><div class='q_progress_bar'><h3 class='progress_title_holder clearfix' style=''><span class='progress_title'><span>Pricing</span></span><span class='progress_number' style='font-size: 13px;font-weight: 700;'><span>0</span>%</span></h3><div class='progress_content_outer' style='height: 10px;border-radius: 5px;-moz-border-radius: 5px;-webkit-border-radius: 5px;'><div data-percentage='95' class='progress_content' style='height: 10px;'></div></div></div><div class='q_progress_bar'><h3 class='progress_title_holder clearfix' style=''><span class='progress_title'><span>Availability</span></span><span class='progress_number' style='font-size: 13px;font-weight: 700;'><span>0</span>%</span></h3><div class='progress_content_outer' style='height: 10px;border-radius: 5px;-moz-border-radius: 5px;-webkit-border-radius: 5px;'><div data-percentage='85' class='progress_content' style='height: 10px;'></div></div></div></div></div></div></div></div></div></div></div></div></div><section      data-speed="1" class="parallax_section_holder  " style = " height:300px; background-image:url('https://www.skillgraphics.biz/wp-content/uploads/2020/04/home-parallax-3.jpg');"><div class="parallax_content center"><div class='parallax_section_inner_margin clearfix'><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper">	<div class="vc_empty_space"  style="height: 80px" ><span
+                                                        class="vc_empty_space_inner">
+			<span class="empty_space_image"  ></span>
+		</span></div>
+
+                                                <div      class="vc_row wpb_row section vc_row-fluid vc_inner " style=' text-align:left;'><div class=" full_section_inner clearfix"><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="q_counter_holder  center" style=""><span class="counter  zero" style="color: #ffffff;font-size: 72px;font-weight: 400;">270</span><p class="counter_text" style="font-size: 18px;font-weight: 600;text-transform: uppercase;color: #ffffff;">Satissfied Clients</p></div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="q_counter_holder  center" style=""><span class="counter  zero" style="color: #ffffff;font-size: 72px;font-weight: 400;">375000</span><p class="counter_text" style="font-size: 18px;font-weight: 600;text-transform: uppercase;color: #ffffff;">Total Complete Files</p></div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="q_counter_holder  center" style=""><span class="counter  zero" style="color: #ffffff;font-size: 72px;font-weight: 400;">2500</span><p class="counter_text" style="font-size: 18px;font-weight: 600;text-transform: uppercase;color: #ffffff;">Total Project</p></div></div></div></div></div></div></div></div></div></div></div></section><div   data-q_id="#Package"    class="vc_row wpb_row section vc_row-fluid  vc_custom_1586273393897 grid_section" style=' text-align:center;'><div class=" section_inner clearfix"><div class='section_inner_margin clearfix'><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><div class='q_elements_holder one_column responsive_mode_from_768' ><div class='q_elements_item ' data-768-1024='107px 10% 70px' data-600-768='107px 4% 70px' data-480-600='107px 0% 70px' data-480='107px 0% 70px' data-animation='no' data-item-class='q_elements_holder_custom_783880' style='text-align:center;'><div class='q_elements_item_inner'><div class='q_elements_item_content q_elements_holder_custom_783880' style='padding:107px 16% 70px'>
+                                                                <div class="wpb_text_column wpb_content_element ">
+                                                                    <div class="wpb_wrapper">
+                                                                        <h1>Choose Your Perfect Package</h1>
+
+                                                                    </div>
+                                                                </div> 	<div class="vc_empty_space"  style="height: 16px" ><span
+                                                                        class="vc_empty_space_inner">
+			<span class="empty_space_image"  ></span>
+		</span></div>
+
+
+                                                                <div class="wpb_text_column wpb_content_element ">
+                                                                    <div class="wpb_wrapper">
+                                                                        <h4>Our production system has been built from the group up with large volume orders in mind. We use both automated and manual quality control systems, so rest assured that your images will turn out just as you wanted them.</h4>
+
+                                                                    </div>
+                                                                </div> </div></div></div></div><div class="qode_pricing_tables clearfix four_columns"><div class='q_price_table '><div class='price_table_inner'><ul><li class='cell table_title'><h3 class='title_content'>Standard</h3><li class='prices'><div class='price_in_table'><sup class='value'>.</sup><span class='price'>24</span><span class='mark'>Hour</span></div></li><li class='pricing_table_content'>Any Number of images.</p>
+                                                                    <p>&nbsp;</p>
+                                                                    <p>Pick Our Standard</p>
+                                                                    <p>delivery option with no</p>
+                                                                    <p>extra charge.</p>
+                                                                    <p>&nbsp;</p>
+                                                                    <p>.</li><li class='price_button'><a itemprop='url' class='qbutton white medium' href='#' target='_self'>Get Started</a></li></ul></div></div><div class='q_price_table '><div class='price_table_inner'><ul><li class='cell table_title'><h3 class='title_content'>Express</h3><li class='prices'><div class='price_in_table'><sup class='value'>.</sup><span class='price'>12</span><span class='mark'>Hour</span></div></li><li class='pricing_table_content'>Up to 500 images.</p>
+                                                                    <p>&nbsp;</p>
+                                                                    <p>Pick Our Express</p>
+                                                                    <p>delivery option with 50%</p>
+                                                                    <p>additional charge.</p>
+                                                                    <p>&nbsp;</p>
+                                                                    <p>.</li><li class='price_button'><a itemprop='url' class='qbutton white medium' href='#' target='_self'>Get Started</a></li></ul></div></div><div class='q_price_table '><div class='price_table_inner'><ul><li class='cell table_title'><h3 class='title_content'>Urgent</h3><li class='prices'><div class='price_in_table'><sup class='value'>.</sup><span class='price'>6</span><span class='mark'>Hour</span></div></li><li class='pricing_table_content'>Up to 100 images.</p>
+                                                                    <p>&nbsp;</p>
+                                                                    <p>Pick Our Urgent</p>
+                                                                    <p>delivery option with 100%</p>
+                                                                    <p>additional charge.</p>
+                                                                    <p>&nbsp;</p>
+                                                                    <p>.</li><li class='price_button'><a itemprop='url' class='qbutton white medium' href='#' target='_self'>Get Started</a></li></ul></div></div><div class='q_price_table '><div class='price_table_inner'><ul><li class='cell table_title'><h3 class='title_content'>Enterprise</h3><li class='prices'><div class='price_in_table'><sup class='value'>.</sup><span class='price'>Next</span><span class='mark'>Day</span></div></li><li class='pricing_table_content'>Any Number of images.</p>
+                                                                    <p>&nbsp;</p>
+                                                                    <p>Your order will be delivered in the next Morning 10 AM on client&#8217;s time zone up.</p>
+                                                                    <p>&nbsp;</p>
+                                                                    <p>.</li><li class='price_button'><a itemprop='url' class='qbutton white medium' href='#' target='_self'>Contact Us</a></li></ul></div></div></div></div></div></div></div></div></div><div      class="vc_row wpb_row section vc_row-fluid  vc_custom_1586271340113" style=' text-align:center;'><div class=" full_section_inner clearfix"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper">	<div class="vc_empty_space"  style="height: 12px" ><span
+                                                    class="vc_empty_space_inner">
+			<span class="empty_space_image"  ></span>
+		</span></div>
+
+
+                                            <div class="wpb_text_column wpb_content_element ">
+                                                <div class="wpb_wrapper">
+                                                    <h1 style="text-align: center;"><strong>Payments Method</strong></h1>
+
+                                                </div>
+                                            </div> 	<div class="vc_empty_space"  style="height: 12px" ><span
+                                                    class="vc_empty_space_inner">
+			<span class="empty_space_image"  ></span>
+		</span></div>
+
+
+                                            <div class="wpb_text_column wpb_content_element ">
+                                                <div class="wpb_wrapper">
+                                                    <h4>At the end of each month we will send an invoice for all the job done ( we can send invoice individually for each project too if require). Invoice should be paid within 15-30 days from invoice date. Payment should be write to our Bank account directly with SWIFT code Provided.</h4>
+
+                                                </div>
+                                            </div> 	<div class="vc_empty_space"  style="height: 132px" ><span
+                                                    class="vc_empty_space_inner">
+			<span class="empty_space_image"  ></span>
+		</span></div>
+
+                                        </div></div></div></div></div><div   data-q_id="#Contact"    class="vc_row wpb_row section vc_row-fluid " style=' text-align:center;'><div class=" full_section_inner clearfix"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><a  itemprop="url" href="#" target="_self" data-hover-background-color='#1c1c1c' data-hover-border-color='#bb009b' data-hover-color='#ffffff' class="qbutton  big_large_full_width center default" style="color: #ffffff; border-color: #000000; background-color: #bb009b;">GET IN TOUCH ITH US</a></div></div></div></div></div><div      class="vc_row wpb_row section vc_row-fluid " style=' text-align:left;'><div class=" full_section_inner clearfix"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><div class='qode_image_gallery_no_space '><div class='qode_image_gallery_holder' style='height: 300px;'><ul  ><li  ><div style="height: 300px; width:400px;"><a itemprop="image" class="prettyphoto" data-rel="prettyPhoto[rel-2242132]" href="wp-content/uploads/2020/04/IMG_1256-1-scaled.jpg"><img itemprop="image" src="wp-content/uploads/2020/04/IMG_1256-1-scaled.jpg" alt="" /></a></div></li><li  ><div style="height: 300px; width:400px;"><a itemprop="image" class="prettyphoto" data-rel="prettyPhoto[rel-2242132]" href="wp-content/uploads/2020/04/IMG_1257-scaled.jpg"><img itemprop="image" src="wp-content/uploads/2020/04/IMG_1257-scaled.jpg" alt="" /></a></div></li><li  ><div style="height: 300px; width:400px;"><a itemprop="image" class="prettyphoto" data-rel="prettyPhoto[rel-2242132]" href="wp-content/uploads/2020/04/IMG_1256-scaled.jpg"><img itemprop="image" src="wp-content/uploads/2020/04/IMG_1256-scaled.jpg" alt="" /></a></div></li><li  ><div style="height: 300px; width:400px;"><a itemprop="image" class="prettyphoto" data-rel="prettyPhoto[rel-2242132]" href="wp-content/uploads/2020/04/IMG_1254-scaled.jpg"><img itemprop="image" src="wp-content/uploads/2020/04/IMG_1254-scaled.jpg" alt="" /></a></div></li></ul></div><div class="controls"><a class="prev-slide" href="#"><span><i class="fa fa-angle-left"></i></span></a><a class="next-slide" href="#"><span><i class="fa fa-angle-right"></i></span></a></div></div>	<div class="vc_empty_space"  style="height: 100px" ><span
+                                                    class="vc_empty_space_inner">
+			<span class="empty_space_image"  ></span>
+		</span></div>
+
+                                        </div></div></div></div></div><div   data-q_id="#Contact"    class="vc_row wpb_row section vc_row-fluid  vc_custom_1586184883660 full_screen_section" style='background-color:#0c0c0c; text-align:left;'><div class=" full_section_inner clearfix"><div class="wpb_column vc_column_container vc_col-sm-8"><div class="vc_column-inner vc_custom_1586184621963"><div class="wpb_wrapper"><div class='q_icon_with_title tiny normal_icon center qode-iwt-content-alignment-left '><div class="icon_holder " style=" "><span data-icon-type="normal"   style="" class="qode_iwt_icon_holder q_font_awsome_icon fa-lg  "><i class="qode_icon_font_awesome fa  qode_iwt_icon_element" style="" ></i></span></div><div class="icon_text_holder" style=""><div class="icon_text_inner" style=""><h3 class="icon_title" style="color: #ffffff;">Skill Graphics Ltd.</h3><p style='color: #ffffff'>Phone: +880 1713486691<br />
+                                                            Email: <a href="cdn-cgi/l/email-protection.html" class="__cf_email__" data-cfemail="d0a3a5a0a0bfa2a490a3bbb9bcbcb7a2b1a0b8b9b3a3feb2b9aa">[email&#160;protected]</a><br />
+                                                            Road #20, House #40/A, Flat #3/A<br />
+                                                            Mohakhali DOHS, Dhaka, Bangladesh</p></div></div></div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner vc_custom_1586184796860"><div class="wpb_wrapper">	<div class="vc_empty_space"  style="height: 80px" ><span
+                                                    class="vc_empty_space_inner">
+			<span class="empty_space_image"  ></span>
+		</span></div>
+
+                                            <div      class="vc_row wpb_row section vc_row-fluid vc_inner  vc_custom_1586184870259" style=' text-align:left;'><div class=" full_section_inner clearfix"><div class="wpb_column vc_column_container vc_col-sm-1/5"><div class="vc_column-inner"><div class="wpb_wrapper"><span class='q_social_icon_holder circle_social' data-color=#0f7fe0 data-hover-color=#ffffff><a itemprop='url' href='https://www.facebook.com/skillgraphics.biz' target='_self'><span class='fa-stack fa-lg' style=''><i class="qode_icon_font_awesome fa fa-facebook " style="color: #0f7fe0;" ></i></span></a></span></div></div></div><div class="wpb_column vc_column_container vc_col-sm-1/5"><div class="vc_column-inner"><div class="wpb_wrapper"><span class='q_social_icon_holder circle_social' data-color=#0bb2ef data-hover-color=#ffffff><a itemprop='url' href='https://join.skype.com/invite/JCh6h87c0V7C' target='_self'><span class='fa-stack fa-lg' style=''><i class="qode_icon_font_awesome fa fa-skype " style="color: #0bb2ef;" ></i></span></a></span></div></div></div><div class="wpb_column vc_column_container vc_col-sm-1/5"><div class="vc_column-inner"><div class="wpb_wrapper"><span class='q_social_icon_holder circle_social' data-color=#0a90c9 data-hover-color=#ffffff><span class='fa-stack fa-lg' style=''><i class="qode_icon_font_awesome fa fa-dropbox " style="color: #0a90c9;" ></i></span></span></div></div></div><div class="wpb_column vc_column_container vc_col-sm-1/5"><div class="vc_column-inner"><div class="wpb_wrapper"><span class='q_social_icon_holder circle_social' data-color=#1e73be data-hover-color=#ffffff><span class='fa-stack fa-lg' style=''><i class="qode_icon_font_awesome fa fa-linkedin " style="color: #1e73be;" ></i></span></span></div></div></div><div class="wpb_column vc_column_container vc_col-sm-1/5"><div class="vc_column-inner"><div class="wpb_wrapper"><span class='q_social_icon_holder circle_social' data-color=#dd1a1a data-hover-color=#ffffff><span class='fa-stack fa-lg' style=''><i class="qode_icon_font_awesome fa fa-youtube " style="color: #dd1a1a;" ></i></span></span></div></div></div></div></div><div class='q_icon_with_title tiny normal_icon center qode-iwt-content-alignment-left '><div class="icon_holder " style=" "><span data-icon-type="normal"   style="" class="qode_iwt_icon_holder q_font_awsome_icon fa-lg  "><i class="qode_icon_font_awesome fa  qode_iwt_icon_element" style="" ></i></span></div><div class="icon_text_holder" style=""><div class="icon_text_inner" style=""><h6 class="icon_title" style="color: #ffffff;"></h6><p style='color: #ffffff'>© 2020 | All Rights Reserved. Skill Graphics</p></div></div></div></div></div></div></div></div><div      class="vc_row wpb_row section vc_row-fluid " style=' text-align:left;'><div class=" full_section_inner clearfix"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper">
+                                            <div class="wpb_raw_code wpb_raw_js" >
+                                                <div class="wpb_wrapper">
+                                                    <!-- Messenger Chat Plugin Code -->
+                                                    <div id="fb-root"></div>
+
+                                                    <!-- Your Chat Plugin code -->
+                                                    <div id="fb-customer-chat" class="fb-customerchat">
+                                                    </div>
+
+                                                    <script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+                                                        var chatbox = document.getElementById('fb-customer-chat');
+                                                        chatbox.setAttribute("page_id", "107248047473999");
+                                                        chatbox.setAttribute("attribution", "biz_inbox");
+
+                                                        window.fbAsyncInit = function() {
+                                                            FB.init({
+                                                                xfbml            : true,
+                                                                version          : 'v11.0'
+                                                            });
+                                                        };
+
+                                                        (function(d, s, id) {
+                                                            var js, fjs = d.getElementsByTagName(s)[0];
+                                                            if (d.getElementById(id)) return;
+                                                            js = d.createElement(s); js.id = id;
+                                                            js.src = '../connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+                                                            fjs.parentNode.insertBefore(js, fjs);
+                                                        }(document, 'script', 'facebook-jssdk'));
+                                                    </script>
+                                                </div>
+                                            </div>
+                                        </div></div></div></div></div>
+
+
+                    </div>
                 </div>
-            @endif
 
-            <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
-                <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
-                    <svg viewBox="0 0 651 192" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-16 w-auto text-gray-700 sm:h-20">
-                        <g clip-path="url(#clip0)" fill="#EF3B2D">
-                            <path d="M248.032 44.676h-16.466v100.23h47.394v-14.748h-30.928V44.676zM337.091 87.202c-2.101-3.341-5.083-5.965-8.949-7.875-3.865-1.909-7.756-2.864-11.669-2.864-5.062 0-9.69.931-13.89 2.792-4.201 1.861-7.804 4.417-10.811 7.661-3.007 3.246-5.347 6.993-7.016 11.239-1.672 4.249-2.506 8.713-2.506 13.389 0 4.774.834 9.26 2.506 13.459 1.669 4.202 4.009 7.925 7.016 11.169 3.007 3.246 6.609 5.799 10.811 7.66 4.199 1.861 8.828 2.792 13.89 2.792 3.913 0 7.804-.955 11.669-2.863 3.866-1.908 6.849-4.533 8.949-7.875v9.021h15.607V78.182h-15.607v9.02zm-1.431 32.503c-.955 2.578-2.291 4.821-4.009 6.73-1.719 1.91-3.795 3.437-6.229 4.582-2.435 1.146-5.133 1.718-8.091 1.718-2.96 0-5.633-.572-8.019-1.718-2.387-1.146-4.438-2.672-6.156-4.582-1.719-1.909-3.032-4.152-3.938-6.73-.909-2.577-1.36-5.298-1.36-8.161 0-2.864.451-5.585 1.36-8.162.905-2.577 2.219-4.819 3.938-6.729 1.718-1.908 3.77-3.437 6.156-4.582 2.386-1.146 5.059-1.718 8.019-1.718 2.958 0 5.656.572 8.091 1.718 2.434 1.146 4.51 2.674 6.229 4.582 1.718 1.91 3.054 4.152 4.009 6.729.953 2.577 1.432 5.298 1.432 8.162-.001 2.863-.479 5.584-1.432 8.161zM463.954 87.202c-2.101-3.341-5.083-5.965-8.949-7.875-3.865-1.909-7.756-2.864-11.669-2.864-5.062 0-9.69.931-13.89 2.792-4.201 1.861-7.804 4.417-10.811 7.661-3.007 3.246-5.347 6.993-7.016 11.239-1.672 4.249-2.506 8.713-2.506 13.389 0 4.774.834 9.26 2.506 13.459 1.669 4.202 4.009 7.925 7.016 11.169 3.007 3.246 6.609 5.799 10.811 7.66 4.199 1.861 8.828 2.792 13.89 2.792 3.913 0 7.804-.955 11.669-2.863 3.866-1.908 6.849-4.533 8.949-7.875v9.021h15.607V78.182h-15.607v9.02zm-1.432 32.503c-.955 2.578-2.291 4.821-4.009 6.73-1.719 1.91-3.795 3.437-6.229 4.582-2.435 1.146-5.133 1.718-8.091 1.718-2.96 0-5.633-.572-8.019-1.718-2.387-1.146-4.438-2.672-6.156-4.582-1.719-1.909-3.032-4.152-3.938-6.73-.909-2.577-1.36-5.298-1.36-8.161 0-2.864.451-5.585 1.36-8.162.905-2.577 2.219-4.819 3.938-6.729 1.718-1.908 3.77-3.437 6.156-4.582 2.386-1.146 5.059-1.718 8.019-1.718 2.958 0 5.656.572 8.091 1.718 2.434 1.146 4.51 2.674 6.229 4.582 1.718 1.91 3.054 4.152 4.009 6.729.953 2.577 1.432 5.298 1.432 8.162 0 2.863-.479 5.584-1.432 8.161zM650.772 44.676h-15.606v100.23h15.606V44.676zM365.013 144.906h15.607V93.538h26.776V78.182h-42.383v66.724zM542.133 78.182l-19.616 51.096-19.616-51.096h-15.808l25.617 66.724h19.614l25.617-66.724h-15.808zM591.98 76.466c-19.112 0-34.239 15.706-34.239 35.079 0 21.416 14.641 35.079 36.239 35.079 12.088 0 19.806-4.622 29.234-14.688l-10.544-8.158c-.006.008-7.958 10.449-19.832 10.449-13.802 0-19.612-11.127-19.612-16.884h51.777c2.72-22.043-11.772-40.877-33.023-40.877zm-18.713 29.28c.12-1.284 1.917-16.884 18.589-16.884 16.671 0 18.697 15.598 18.813 16.884h-37.402zM184.068 43.892c-.024-.088-.073-.165-.104-.25-.058-.157-.108-.316-.191-.46-.056-.097-.137-.176-.203-.265-.087-.117-.161-.242-.265-.345-.085-.086-.194-.148-.29-.223-.109-.085-.206-.182-.327-.252l-.002-.001-.002-.002-35.648-20.524a2.971 2.971 0 00-2.964 0l-35.647 20.522-.002.002-.002.001c-.121.07-.219.167-.327.252-.096.075-.205.138-.29.223-.103.103-.178.228-.265.345-.066.089-.147.169-.203.265-.083.144-.133.304-.191.46-.031.085-.08.162-.104.25-.067.249-.103.51-.103.776v38.979l-29.706 17.103V24.493a3 3 0 00-.103-.776c-.024-.088-.073-.165-.104-.25-.058-.157-.108-.316-.191-.46-.056-.097-.137-.176-.203-.265-.087-.117-.161-.242-.265-.345-.085-.086-.194-.148-.29-.223-.109-.085-.206-.182-.327-.252l-.002-.001-.002-.002L40.098 1.396a2.971 2.971 0 00-2.964 0L1.487 21.919l-.002.002-.002.001c-.121.07-.219.167-.327.252-.096.075-.205.138-.29.223-.103.103-.178.228-.265.345-.066.089-.147.169-.203.265-.083.144-.133.304-.191.46-.031.085-.08.162-.104.25-.067.249-.103.51-.103.776v122.09c0 1.063.568 2.044 1.489 2.575l71.293 41.045c.156.089.324.143.49.202.078.028.15.074.23.095a2.98 2.98 0 001.524 0c.069-.018.132-.059.2-.083.176-.061.354-.119.519-.214l71.293-41.045a2.971 2.971 0 001.489-2.575v-38.979l34.158-19.666a2.971 2.971 0 001.489-2.575V44.666a3.075 3.075 0 00-.106-.774zM74.255 143.167l-29.648-16.779 31.136-17.926.001-.001 34.164-19.669 29.674 17.084-21.772 12.428-43.555 24.863zm68.329-76.259v33.841l-12.475-7.182-17.231-9.92V49.806l12.475 7.182 17.231 9.92zm2.97-39.335l29.693 17.095-29.693 17.095-29.693-17.095 29.693-17.095zM54.06 114.089l-12.475 7.182V46.733l17.231-9.92 12.475-7.182v74.537l-17.231 9.921zM38.614 7.398l29.693 17.095-29.693 17.095L8.921 24.493 38.614 7.398zM5.938 29.632l12.475 7.182 17.231 9.92v79.676l.001.005-.001.006c0 .114.032.221.045.333.017.146.021.294.059.434l.002.007c.032.117.094.222.14.334.051.124.088.255.156.371a.036.036 0 00.004.009c.061.105.149.191.222.288.081.105.149.22.244.314l.008.01c.084.083.19.142.284.215.106.083.202.178.32.247l.013.005.011.008 34.139 19.321v34.175L5.939 144.867V29.632h-.001zm136.646 115.235l-65.352 37.625V148.31l48.399-27.628 16.953-9.677v33.862zm35.646-61.22l-29.706 17.102V66.908l17.231-9.92 12.475-7.182v33.841z"/>
-                        </g>
-                    </svg>
-                </div>
+            </div>
+        </div>
 
-                <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
-                    <div class="grid grid-cols-1 md:grid-cols-2">
-                        <div class="p-6">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laravel.com/docs" class="underline text-gray-900 dark:text-white">Documentation</a></div>
-                            </div>
 
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laravel has wonderful, thorough documentation covering every aspect of the framework. Whether you are new to the framework or have previous experience with Laravel, we recommend reading all of the documentation from beginning to end.
-                                </div>
-                            </div>
-                        </div>
 
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-t-0 md:border-l">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path><path d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laracasts.com" class="underline text-gray-900 dark:text-white">Laracasts</a></div>
-                            </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laracasts offers thousands of video tutorials on Laravel, PHP, and JavaScript development. Check them out, see for yourself, and massively level up your development skills in the process.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laravel-news.com/" class="underline text-gray-900 dark:text-white">Laravel News</a></div>
-                            </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laravel News is a community driven portal and newsletter aggregating all of the latest and most important news in the Laravel ecosystem, including new package releases and tutorials.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-l">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold text-gray-900 dark:text-white">Vibrant Ecosystem</div>
-                            </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laravel's robust library of first-party tools and libraries, such as <a href="https://forge.laravel.com" class="underline">Forge</a>, <a href="https://vapor.laravel.com" class="underline">Vapor</a>, <a href="https://nova.laravel.com" class="underline">Nova</a>, and <a href="https://envoyer.io" class="underline">Envoyer</a> help you take your projects to the next level. Pair them with powerful open source libraries like <a href="https://laravel.com/docs/billing" class="underline">Cashier</a>, <a href="https://laravel.com/docs/dusk" class="underline">Dusk</a>, <a href="https://laravel.com/docs/broadcasting" class="underline">Echo</a>, <a href="https://laravel.com/docs/horizon" class="underline">Horizon</a>, <a href="https://laravel.com/docs/sanctum" class="underline">Sanctum</a>, <a href="https://laravel.com/docs/telescope" class="underline">Telescope</a>, and more.
+        <footer >
+            <div class="footer_inner clearfix">
+                <div class="footer_top_holder">
+                    <div class="footer_top">
+                        <div class="container">
+                            <div class="container_inner">
+                                <div class="four_columns clearfix">
+                                    <div class="column1 footer_col1">
+                                        <div class="column_inner">
+                                        </div>
+                                    </div>
+                                    <div class="column2 footer_col2">
+                                        <div class="column_inner">
+                                        </div>
+                                    </div>
+                                    <div class="column3 footer_col3">
+                                        <div class="column_inner">
+                                        </div>
+                                    </div>
+                                    <div class="column4 footer_col4">
+                                        <div class="column_inner">
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="flex justify-center mt-4 sm:items-center sm:justify-between">
-                    <div class="text-center text-sm text-gray-500 sm:text-left">
-                        <div class="flex items-center">
-                            <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor" class="-mt-px w-5 h-5 text-gray-400">
-                                <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
-                            </svg>
-
-                            <a href="https://laravel.bigcartel.com" class="ml-1 underline">
-                                Shop
-                            </a>
-
-                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="ml-4 -mt-px w-5 h-5 text-gray-400">
-                                <path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
-                            </svg>
-
-                            <a href="https://github.com/sponsors/taylorotwell" class="ml-1 underline">
-                                Sponsor
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
-                        Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
+                <div class="footer_bottom_holder">
+                    <div class="footer_bottom">
                     </div>
                 </div>
             </div>
-        </div>
-    </body>
+        </footer>
+
+    </div>
+</div>
+<script type="text/html" id="wpb-modifications"></script><link href="../fonts.googleapis.com/css5a81.css?family=Raleway:400%2C600%2C500%7CRoboto:400" rel="stylesheet" property="stylesheet" media="all" type="text/css" >
+
+<script type="text/javascript">
+    if(typeof revslider_showDoubleJqueryError === "undefined") {
+        function revslider_showDoubleJqueryError(sliderID) {
+            var err = "<div class='rs_error_message_box'>";
+            err += "<div class='rs_error_message_oops'>Oops...</div>";
+            err += "<div class='rs_error_message_content'>";
+            err += "You have some jquery.js library include that comes after the Slider Revolution files js inclusion.<br>";
+            err += "To fix this, you can:<br>&nbsp;&nbsp;&nbsp; 1. Set 'Module General Options' -> 'Advanced' -> 'jQuery & OutPut Filters' -> 'Put JS to Body' to on";
+            err += "<br>&nbsp;&nbsp;&nbsp; 2. Find the double jQuery.js inclusion and remove it";
+            err += "</div>";
+            err += "</div>";
+            jQuery(sliderID).show().html(err);
+        }
+    }
+</script>
+<script type='text/javascript' src='wp-includes/js/jquery/ui/core.mine899.js?ver=1.11.4'></script>
+<script type='text/javascript' src='wp-includes/js/jquery/ui/widget.mine899.js?ver=1.11.4'></script>
+<script type='text/javascript' src='wp-includes/js/jquery/ui/accordion.mine899.js?ver=1.11.4'></script>
+<script type='text/javascript' src='wp-includes/js/jquery/ui/position.mine899.js?ver=1.11.4'></script>
+<script type='text/javascript' src='wp-includes/js/jquery/ui/menu.mine899.js?ver=1.11.4'></script>
+<script type='text/javascript' src='wp-includes/js/wp-a11y.min8fc0.js?ver=4.6.23'></script>
+<script type='text/javascript'>
+    /* <![CDATA[ */
+    var uiAutocompleteL10n = {"noResults":"No search results.","oneResult":"1 result found. Use up and down arrow keys to navigate.","manyResults":"%d results found. Use up and down arrow keys to navigate."};
+    /* ]]> */
+</script>
+<script type='text/javascript' src='wp-includes/js/jquery/ui/autocomplete.mine899.js?ver=1.11.4'></script>
+<script type='text/javascript' src='wp-includes/js/jquery/ui/button.mine899.js?ver=1.11.4'></script>
+<script type='text/javascript' src='wp-includes/js/jquery/ui/datepicker.mine899.js?ver=1.11.4'></script>
+<script type='text/javascript'>
+    jQuery(document).ready(function(jQuery){jQuery.datepicker.setDefaults({"closeText":"Close","currentText":"Today","monthNames":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesShort":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"nextText":"Next","prevText":"Previous","dayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"dayNamesShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"dayNamesMin":["S","M","T","W","T","F","S"],"dateFormat":"MM d, yy","firstDay":1,"isRTL":false});});
+</script>
+<script type='text/javascript' src="{{ asset('frontend/js/jquery/ui/mouse.mine899.js?ver=1.11.4') }}"></script>
+<script type='text/javascript' src="{{ asset('frontend/js/jquery/ui/resizable.mine899.js?ver=1.11.4') }}"></script>
+<script type='text/javascript' src="{{ asset('frontend/js/jquery/ui/draggable.mine899.js?ver=1.11.4') }}"></script>
+<script type='text/javascript' src="{{ asset('frontend/js/jquery/ui/dialog.mine899.js?ver=1.11.4') }}"></script>
+<script type='text/javascript' src="{{ asset('frontend/js/jquery/ui/droppable.mine899.js?ver=1.11.4') }}"></script>
+<script type='text/javascript' src="{{ asset('frontend/js/jquery/ui/progressbar.mine899.js?ver=1.11.4') }}"></script>
+<script type='text/javascript' src="{{ asset('frontend/js/jquery/ui/selectable.mine899.js?ver=1.11.4') }}"></script>
+<script type='text/javascript' src="{{ asset('frontend/js/jquery/ui/sortable.mine899.js?ver=1.11.4') }}"></script>
+<script type='text/javascript' src="{{ asset('frontend/js/jquery/ui/slider.mine899.js?ver=1.11.4') }}"></script>
+<script type='text/javascript' src="{{ asset('frontend/js/jquery/ui/spinner.mine899.js?ver=1.11.4') }}"></script>
+<script type='text/javascript' src="{{ asset('frontend/js/jquery/ui/tooltip.mine899.js?ver=1.11.4') }}"></script>
+<script type='text/javascript' src="{{ asset('frontend/js/jquery/ui/tabs.mine899.js?ver=1.11.4') }}"></script>
+<script type='text/javascript' src="{{ asset('frontend/js/jquery/ui/effect.mine899.js?ver=1.11.4') }}"></script>
+<script type='text/javascript' src="{{ asset('frontend/js/jquery/ui/effect-blind.mine899.js?ver=1.11.4') }}"></script>
+<script type='text/javascript' src="{{ asset('frontend/js/jquery/ui/effect-bounce.mine899.js?ver=1.11.4') }}"></script>
+<script type='text/javascript' src="{{ asset('frontend/js/jquery/ui/effect-clip.mine899.js?ver=1.11.4') }}"></script>
+<script type='text/javascript' src="{{ asset('frontend/js/jquery/ui/effect-drop.mine899.js?ver=1.11.4') }}"></script>
+<script type='text/javascript' src="{{ asset('frontend/js/jquery/ui/effect-explode.mine899.js?ver=1.11.4') }}"></script>
+<script type='text/javascript' src="{{ asset('frontend/js/jquery/ui/effect-fade.mine899.js?ver=1.11.4') }}"></script>
+<script type='text/javascript' src="{{ asset('frontend/js/jquery/ui/effect-fold.mine899.js?ver=1.11.4') }}"></script>
+<script type='text/javascript' src="{{ asset('frontend/js/jquery/ui/effect-highlight.mine899.js?ver=1.11.4') }}"></script>
+<script type='text/javascript' src="{{ asset('frontend/js/jquery/ui/effect-pulsate.mine899.js?ver=1.11.4') }}"></script>
+<script type='text/javascript' src="{{ asset('frontend/js/jquery/ui/effect-size.mine899.js?ver=1.11.4') }}"></script>
+<script type='text/javascript' src="{{ asset('frontend/js/jquery/ui/effect-scale.mine899.js?ver=1.11.4') }}"></script>
+<script type='text/javascript' src="{{ asset('frontend/js/jquery/ui/effect-shake.mine899.js?ver=1.11.4') }}"></script>
+<script type='text/javascript' src={{ asset('frontend/js/jquery/ui/effect-slide.mine899.js?ver=1.11.4') }}></script>
+<script type='text/javascript' src="{{ asset('frontend/js/jquery/ui/effect-transfer.mine899.js?ver=1.11.4') }}"></script>
+<script type='text/javascript' src="{{ asset('frontend/themes/bridge/js/plugins/doubletaptogo8fc0.js?ver=4.6.23') }}"></script>
+<script type='text/javascript' src="{{ asset('frontend/themes/bridge/js/plugins/modernizr.min8fc0.js?ver=4.6.23') }}"></script>
+<script type='text/javascript' src="{{ asset('frontend/themes/bridge/js/plugins/jquery.appear8fc0.js?ver=4.6.23') }}"></script>
+<script type='text/javascript' src="{{ asset('frontend/js/hoverIntent.minc245.js?ver=1.8.1') }}"></script>
+<script type='text/javascript' src="{{ asset('frontend/themes/bridge/js/plugins/counter8fc0.js?ver=4.6.23') }}"></script>
+<script type='text/javascript' src="{{ asset('frontend/themes/bridge/js/plugins/easypiechart8fc0.js?ver=4.6.23') }}"></script>
+<script type='text/javascript' src="{{ asset('frontend/themes/bridge/js/plugins/mixitup8fc0.js?ver=4.6.23') }}"></script>
+<script type='text/javascript' src="{{ asset('frontend/themes/bridge/js/plugins/jquery.prettyPhoto8fc0.js?ver=4.6.23') }}"></script>
+<script type='text/javascript' src="{{ asset('frontend/themes/bridge/js/plugins/jquery.fitvids8fc0.js?ver=4.6.23') }}"></script>
+<script type='text/javascript' src="{{ asset('frontend/themes/bridge/js/plugins/jquery.flexslider-min8fc0.js?ver=4.6.23') }}"></script>
+<script type='text/javascript'>
+    /* <![CDATA[ */
+    var mejsL10n = {"language":"en-US","strings":{"Close":"Close","Fullscreen":"Fullscreen","Turn off Fullscreen":"Turn off Fullscreen","Go Fullscreen":"Go Fullscreen","Download File":"Download File","Download Video":"Download Video","Play":"Play","Pause":"Pause","Captions\/Subtitles":"Captions\/Subtitles","None":"None","Time Slider":"Time Slider","Skip back %1 seconds":"Skip back %1 seconds","Video Player":"Video Player","Audio Player":"Audio Player","Volume Slider":"Volume Slider","Mute Toggle":"Mute Toggle","Unmute":"Unmute","Mute":"Mute","Use Up\/Down Arrow keys to increase or decrease volume.":"Use Up\/Down Arrow keys to increase or decrease volume.","Use Left\/Right Arrow keys to advance one second, Up\/Down arrows to advance ten seconds.":"Use Left\/Right Arrow keys to advance one second, Up\/Down arrows to advance ten seconds."}};
+    var _wpmejsSettings = {"pluginPath":"\/wp-includes\/js\/mediaelement\/"};
+    /* ]]> */
+</script>
+<script type='text/javascript' src="{{ asset('frontend/js/mediaelement/mediaelement-and-player.min51cd.js?ver=2.22.0') }}"></script>
+<script type='text/javascript' src="{{ asset('frontend/js/mediaelement/wp-mediaelement.min8fc0.js?ver=4.6.23') }}"></script>
+<script type='text/javascript' src="{{ asset('frontend/themes/bridge/js/plugins/infinitescroll.min8fc0.js?ver=4.6.23') }}"></script>
+<script type='text/javascript' src="{{ asset('frontend/themes/bridge/js/plugins/jquery.waitforimages8fc0.js?ver=4.6.23') }}"></script>
+<script type='text/javascript' src="{{ asset('frontend/js/jquery/jquery.form.min018d.js?ver=3.37.0') }}"></script>
+<script type='text/javascript' src="{{ asset('frontend/themes/bridge/js/plugins/waypoints.min8fc0.js?ver=4.6.23') }}"></script>
+<script type='text/javascript' src="{{ asset('frontend/frontend/themes/bridge/js/plugins/jplayer.min8fc0.js?ver=4.6.23') }}"></script>
+<script type='text/javascript' src="{{ asset('frontend/themes/bridge/js/plugins/bootstrap.carousel8fc0.js?ver=4.6.23') }}"></script>
+<script type='text/javascript' src="{{ asset('frontend/themes/bridge/js/plugins/skrollr8fc0.js?ver=4.6.23') }}"></script>
+<script type='text/javascript' src="{{ asset('frontend/themes/bridge/js/plugins/Chart.min8fc0.js?ver=4.6.23') }}"></script>
+<script type='text/javascript' src="{{ asset('frontend/themes/bridge/js/plugins/jquery.easing.1.38fc0.js?ver=4.6.23') }}"></script>
+<script type='text/javascript' src="{{ asset('frontend/themes/bridge/js/plugins/abstractBaseClass8fc0.js?ver=4.6.23') }}"></script>
+<script type='text/javascript' src="{{ asset('frontend/themes/bridge/js/plugins/jquery.countdown8fc0.js?ver=4.6.23') }}"></script>
+<script type='text/javascript' src="{{ asset('frontend/themes/bridge/js/plugins/jquery.multiscroll.min8fc0.js?ver=4.6.23') }}"></script>
+<script type='text/javascript' src="{{ asset('frontend/themes/bridge/js/plugins/jquery.justifiedGallery.min8fc0.js?ver=4.6.23') }}"></script>
+<script type='text/javascript' src='{{ asset('frontend/themes/bridge/js/plugins/bigtext8fc0.js?ver=4.6.23') }}'></script>
+<script type='text/javascript' src="{{ asset('frontend/themes/bridge/js/plugins/jquery.sticky-kit.min8fc0.js?ver=4.6.23') }}"></script>
+<script type='text/javascript' src="{{ asset('frontend/themes/bridge/js/plugins/owl.carousel.min8fc0.js?ver=4.6.23') }}"></script>
+<script type='text/javascript' src="{{ asset('frontend/themes/bridge/js/plugins/typed8fc0.js?ver=4.6.23') }}"></script>
+<script type='text/javascript' src="{{ asset('frontend/themes/bridge/js/plugins/jquery.carouFredSel-6.2.1.min8fc0.js?ver=4.6.23') }}"></script>
+<script type='text/javascript' src="{{ asset('frontend/themes/bridge/js/plugins/lemmon-slider.min8fc0.js?ver=4.6.23') }}"></script>
+<script type='text/javascript' src="{{ asset('frontend/themes/bridge/js/plugins/jquery.fullPage.min8fc0.js?ver=4.6.23') }}"></script>
+<script type='text/javascript' src="{{ asset('frontend/themes/bridge/js/plugins/jquery.mousewheel.min8fc0.js?ver=4.6.23') }}"></script>
+<script type='text/javascript' src="{{ asset('frontend/themes/bridge/js/plugins/jquery.touchSwipe.min8fc0.js?ver=4.6.23') }}"></script>
+<script type='text/javascript' src="{{ asset('frontend/themes/bridge/js/plugins/jquery.isotope.min8fc0.js?ver=4.6.23') }}"></script>
+<script type='text/javascript' src={{ asset('frontend/themes/bridge/js/plugins/packery-mode.pkgd.min8fc0.js?ver=4.6.23') }}></script>
+<script type='text/javascript' src={{ asset('frontend/themes/bridge/js/plugins/jquery.stretch8fc0.js?ver=4.6.23') }}></script>
+<script type='text/javascript' src="{{ asset('frontend/themes/bridge/js/plugins/imagesloaded8fc0.js?ver=4.6.23') }}"></script>
+<script type='text/javascript' src="{{ asset('frontend/themes/bridge/js/plugins/rangeslider.min8fc0.js?ver=4.6.23') }}"></script>
+<script type='text/javascript' src="{{ asset('frontend/themes/bridge/js/plugins/jquery.event.move8fc0.js?ver=4.6.23') }}"></script>
+<script type='text/javascript' src="{{ asset('frontend/themes/bridge/js/plugins/jquery.twentytwenty8fc0.js?ver=4.6.23') }}"></script>
+<script type='text/javascript' src="{{ asset('frontend/themes/bridge/js/plugins/swiper.min8fc0.js?ver=4.6.23') }}"></script>
+<script type='text/javascript' src="{{ asset('frontend/themes/bridge/js/plugins/TweenLite.min8fc0.js?ver=4.6.23') }}"></script>
+<script type='text/javascript' src="{{ asset('frontend/themes/bridge/js/plugins/ScrollToPlugin.min8fc0.js?ver=4.6.23') }}"></script>
+<script type='text/javascript' src="{{ asset('frontend/themes/bridge/js/plugins/smoothPageScroll.min8fc0.js?ver=4.6.23') }}"></script>
+<script type='text/javascript' src="{{ asset('frontend/themes/bridge/js/default_dynamice6f2.js?ver=1586272495') }}"></script>
+{{--<script type='text/javascript'>--}}
+{{--    /* <![CDATA[ */--}}
+{{--    var QodeAdminAjax = {"ajaxurl":"https:\/\/www.skillgraphics.biz\/wp-admin\/admin-ajax.php"};--}}
+{{--    var qodeGlobalVars = {"vars":{"qodeAddingToCartLabel":"Adding to Cart...","page_scroll_amount_for_sticky":""}};--}}
+{{--    /* ]]> */--}}
+{{--</script>--}}
+<script type='text/javascript' src="{{ asset('frontend/themes/bridge/js/default.min8fc0.js?ver=4.6.23') }}"></script>
+<script type='text/javascript' src="{{ asset('frontend/js/comment-reply.min8fc0.js?ver=4.6.23') }}"></script>
+<script type='text/javascript' src={{ asset('frontend/plugins/js_composer/assets/js/dist/js_composer_front.min9b2d.js?ver=6.1') }}></script>
+{{--<script type='text/javascript'>--}}
+{{--    /* <![CDATA[ */--}}
+{{--    var qodeLike = {"ajaxurl":"https:\/\/www.skillgraphics.biz\/wp-admin\/admin-ajax.php"};--}}
+{{--    /* ]]> */--}}
+{{--</script>--}}
+<script type='text/javascript' src={{ asset('frontend/themes/bridge/js/plugins/qode-like.min8fc0.js?ver=4.6.23') }}></script>
+<script type='text/javascript' src={{ asset('frontend/js/wp-embed.min8fc0.js?ver=4.6.23') }}></script>
+</body>
+
 </html>
