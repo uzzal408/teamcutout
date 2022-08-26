@@ -16,6 +16,13 @@
         </li>
 
         <li>
+            <a class="app-menu__item {{ Route::currentRouteName() == 'admin.abouts.index' ? 'active' : '' }}" href="{{ route('admin.abouts.index') }}">
+                <i class="app-menu__icon fa fa-hand-o-up"></i>
+                <span class="app-menu__label">About Content</span>
+            </a>
+        </li>
+
+        <li>
             <a class="app-menu__item {{ Route::currentRouteName() == 'admin.settings' ? 'active' : '' }}" href="{{ route('admin.settings') }}">
                 <i class="app-menu__icon fa fa-cogs"></i>
                 <span class="app-menu__label">Settings</span>

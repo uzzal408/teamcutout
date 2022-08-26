@@ -15,4 +15,14 @@ Route::group(['middleware'=> 'auth'],function () {
         Route::get('/{id}/delete','App\Http\Controllers\Admin\SliderController@delete')->name('admin.sliders.delete');
 
     });
+
+    Route::group(['prefix'=> 'abouts'],function (){
+        Route::get('/','App\Http\Controllers\Admin\AboutController@index')->name('admin.abouts.index');
+        Route::get('/create','App\Http\Controllers\Admin\AboutController@create')->name('admin.abouts.create');
+        Route::post('/store','App\Http\Controllers\Admin\AboutController@store')->name('admin.abouts.store');
+        Route::get('/{id}/edit','App\Http\Controllers\Admin\AboutController@edit')->name('admin.abouts.edit');
+        Route::post('update','App\Http\Controllers\Admin\AboutController@update')->name('admin.abouts.update');
+        Route::get('/{id}/delete','App\Http\Controllers\Admin\AboutController@delete')->name('admin.abouts.delete');
+
+    });
 });

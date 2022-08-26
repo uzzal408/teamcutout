@@ -6,7 +6,7 @@
             <h1><i class="fa fa-tags"></i> {{ $pageTitle }}</h1>
             <p>{{ $pageSubTitle }}</p>
         </div>
-{{--        <a href="{{ route('admin.sites.create') }}" class="btn btn-primary pull-right">Add New Site</a>--}}
+        <a href="{{ route('admin.abouts.create') }}" class="btn btn-primary pull-right">Add About Content</a>
     </div>
     @include('backend.partials.flash')
     <div class="row">
@@ -18,23 +18,21 @@
                         <tr>
                             <th> # </th>
                             <th>Image</th>
-                            <th> Name </th>
-                            <th> Title</th>
-                            <th>Soring</th>
+                            <th>Title</th>
+                            <th>Sorting</th>
                             <th class="text-center">Status</th>
                             <th style="width:100px; min-width:100px;" class="text-center text-danger"><i class="fa fa-bolt"> </i></th>
                         </tr>
                         </thead>
                         <tbody>
-                        @foreach($sites as $key=>$site)
+                        @foreach($abouts as $key=>$about)
                             <tr>
                                 <td>{{ ++$key }}</td>
-                                <td><img src="{{ asset('storage/'.$site->image) }}" width="80"></td>
-                                <td>{{ $site->name }}</td>
-                                <td>{{ $site->title }}</td>
-                                <td>{{ $site->sorting }}</td>
+                                <td><img src="{{ asset('storage/'.$about->image) }}" width="80"></td>
+                                <td>{{ $about->title }}</td>
+                                <td>{{ $about->sorting }}</td>
                                 <td class="text-center">
-                                    @if ($site->status == 1)
+                                    @if ($about->status == 1)
                                         <span class="badge badge-success">Yes</span>
                                     @else
                                         <span class="badge badge-danger">No</span>
@@ -42,8 +40,8 @@
                                 </td>
                                 <td class="text-center">
                                     <div class="btn-group" role="group" aria-label="Second group">
-                                        <a href="{{ route('admin.sites.edit', $site->id) }}" class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></a>
-                                        <a onclick="return confirm('Are you sure?')" href="{{ route('admin.sites.delete', $site->id) }}" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></a>
+                                        <a href="{{ route('admin.abouts.edit', $about->id) }}" class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></a>
+                                        <a onclick="return confirm('Are you sure?')" href="{{ route('admin.abouts.delete', $about->id) }}" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></a>
                                     </div>
                                 </td>
                             </tr>
