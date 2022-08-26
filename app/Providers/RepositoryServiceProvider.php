@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Contracts\SliderContract;
+use App\Repositories\SliderRepository;
 use Illuminate\Support\ServiceProvider;
 
 class RepositoryServiceProvider extends ServiceProvider
@@ -12,7 +14,9 @@ class RepositoryServiceProvider extends ServiceProvider
      * @return void
      */
 
-    protected $repositories = [];
+    protected $repositories = [
+        SliderContract::class => SliderRepository::class,
+    ];
     public function register()
     {
         foreach ($this->repositories as $interface => $implementation){

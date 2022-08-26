@@ -19,9 +19,8 @@
                             <th> # </th>
                             <th>Image</th>
                             <th>Title</th>
-                            <th>Line One</th>
+                            <th>Title Two</th>
                             <th>Sorting</th>
-                            <th>URL</th>
                             <th class="text-center">Status</th>
                             <th style="width:100px; min-width:100px;" class="text-center text-danger"><i class="fa fa-bolt"> </i></th>
                         </tr>
@@ -31,10 +30,9 @@
                             <tr>
                                 <td>{{ ++$key }}</td>
                                 <td><img src="{{ asset('storage/'.$slider->image) }}" width="80"></td>
-                                <td>{{ $slider->title }}</td>
-                                <td>{{ $slider->line_one }}</td>
+                                <td>{{ $slider->title_one }}</td>
+                                <td>{{ $slider->title_two }}</td>
                                 <td>{{ $slider->sorting }}</td>
-                                <td>{{ $slider->url }}</td>
                                 <td class="text-center">
                                     @if ($slider->status == 1)
                                         <span class="badge badge-success">Yes</span>

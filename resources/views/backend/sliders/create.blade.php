@@ -16,38 +16,17 @@
                 @csrf
                 <div class="tile-body">
                     <div class="form-group">
-                        <label class="control-label" for="title">Title <span class="m-l-5 text-danger"> *</span></label>
-                        <input class="form-control @error('title') is-invalid @enderror" type="text" name="title" id="title" value="{{ old('title') }}" />
-                        <input type="hidden" name="site_id" value="{{ session()->get('site_id') }}">
-                        @error('title')<p style="color: red">{{ $message }}</p> @enderror
+                        <label class="control-label" for="title_one">Title <span class="m-l-5 text-danger"> *</span></label>
+                        <input class="form-control @error('title_one') is-invalid @enderror" type="text" name="title_one" id="title_one" value="{{ old('title_one') }}" />
+                        @error('title_one')<p style="color: red">{{ $message }}</p> @enderror
                     </div>
 
                     <div class="form-group">
-                        <label class="control-label" for="line_one">Line One <span class="m-l-5 text-danger"> *</span></label>
-                        <input class="form-control @error('line_one') is-invalid @enderror" type="text" name="line_one" id="line_one" value="{{ old('line_one') }}" />
-                        <input type="hidden" name="site_id" value="{{ session()->get('site_id') }}">
-                        @error('line_one')<p style="color: red">{{ $message }}</p> @enderror
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label" for="line_two">Line Two <span class="m-l-5 text-danger"> *</span></label>
-                        <input class="form-control @error('line_two') is-invalid @enderror" type="text" name="line_two" id="line_two" value="{{ old('line_two') }}" />
-                        <input type="hidden" name="site_id" value="{{ session()->get('site_id') }}">
-                        @error('line_two')<p style="color: red">{{ $message }}</p> @enderror
+                        <label class="control-label" for="title_two">Title (part two) <span class="m-l-5 text-danger"> *</span></label>
+                        <input class="form-control @error('title_two') is-invalid @enderror" type="text" name="title_two" id="title_two" value="{{ old('title_two') }}" />
+                        @error('title_two')<p style="color: red">{{ $message }}</p> @enderror
                     </div>
 
-                    <div class="form-group">
-                        <label class="control-label" for="line_two">Line Three <span class="m-l-5 text-danger"> *</span></label>
-                        <input class="form-control @error('line_three') is-invalid @enderror" type="text" name="line_three" id="line_three" value="{{ old('line_three') }}" />
-                        <input type="hidden" name="site_id" value="{{ session()->get('site_id') }}">
-                        @error('line_three')<p style="color: red">{{ $message }}</p> @enderror
-                    </div>
-
-                    <div class="form-group">
-                        <label class="control-label" for="url">URL<span class="m-l-5 text-danger"> *</span></label>
-                        <input class="form-control @error('url') is-invalid @enderror" type="text" name="url" id="url" value="{{ old('url') }}" />
-                        <input type="hidden" name="site_id" value="{{ session()->get('site_id') }}">
-                        @error('url')<p style="color: red">{{ $message }}</p> @enderror
-                    </div>
 
                     <div class="form-group">
                         <label class="control-label" for="url">Sorting<span class="m-l-5 text-danger"> *</span></label>
@@ -66,7 +45,7 @@
 
                     <div class="row">
                         <div class="col-md-12" id="dropzone">
-                            <div>Image [Width: 2000px, height: 988px; File Size: Maximum 160KB ]</div>
+                            <div>Image [height: 300px; File Size: Maximum 160KB ]</div>
                             <input class="form-control @error('image') is-invalid @enderror" type="file" id="image" name="image"/>
                             @error('image') {{ $message }} @enderror
                         </div>
