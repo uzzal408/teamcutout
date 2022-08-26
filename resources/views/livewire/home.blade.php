@@ -7,7 +7,8 @@
                     <div class="container" style='background-color:#ffffff'>
                         <div class="container_inner default_template_holder clearfix page_container_inner" >
                             <livewire:inc.slider></livewire:inc.slider>
-                            @include('frontend/include/about')
+                            <livewire:inc.about></livewire:inc.about>
+{{--                            @include('frontend/include/about')--}}
                             @include('frontend/include/services')
 {{--                            @include('frontend/include/portfolio')--}}
                             @include('frontend/include/packageo')
