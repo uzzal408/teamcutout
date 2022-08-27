@@ -212,7 +212,7 @@
                 var containerBottom = containerOffset + containerHeight;
                 var scrollPosition = $(document).scrollTop();
 
-                if(scrollPosition < containerBottom - 20 && scrollPosition >= containerOffset - 20){
+                if(scrollPosition < containerBottom - 50 && scrollPosition >= containerOffset - 50){
                     $(this).addClass('active');
                 } else{
                     $(this).removeClass('active');

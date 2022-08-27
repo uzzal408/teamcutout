@@ -1,9 +1,8 @@
 <?php
 namespace App\Repositories;
 
-use App\Contracts\AboutContract;
-use App\Models\About;
-use App\Models\Slider;
+use App\Contracts\ServiceContract;
+use App\Models\Service;
 use App\Repositories\BaseRepository;
 use Illuminate\Http\UploadedFile;
 use App\Traits\UploadAble;
@@ -12,11 +11,11 @@ use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Doctrine\Instantiator\Exception\InvalidArgumentException;
 
 
-class AboutRepository extends BaseRepository implements AboutContract
+class ServiceRepository extends BaseRepository implements ServiceContract
 {
     use UploadAble;
 
-    public function __construct(About $model)
+    public function __construct(Service $model)
     {
         parent::__construct($model);
         $this->model = $model;
@@ -28,7 +27,7 @@ class AboutRepository extends BaseRepository implements AboutContract
      * @param array $columns
      * @return mixed
      */
-    public function listAbout(string $order = 'id', string $sort = 'desc', array $columns = ['*'])
+    public function listSerivce(string $order = 'id', string $sort = 'desc', array $columns = ['*'])
     {
         return $this->all($columns,$order,$sort);
     }
@@ -37,7 +36,7 @@ class AboutRepository extends BaseRepository implements AboutContract
      * @param int $id
      * @return mixed
      */
-    public function findAboutById(int $id)
+    public function findServiceById(int $id)
     {
         try{
             return $this->findOneOrFail($id);
@@ -46,11 +45,7 @@ class AboutRepository extends BaseRepository implements AboutContract
         }
     }
 
-    /**
-     * @param array $params
-     * @return Slider|mixed
-     */
-    public function createAbout(array $params)
+    public function createService(array $params)
     {
 
         try{
@@ -58,13 +53,13 @@ class AboutRepository extends BaseRepository implements AboutContract
             $image = null;
 
             if($collection->has('image') && ($params['image'] instanceof UploadedFile)){
-                $image = $this->uploadOne($params['image'],'abouts');
+                $image = $this->uploadOne($params['image'],'services');
             }
             $status   = $collection->has('status') ? 1 : 0 ;
             $merge = $collection->merge(compact('image','status'));
-            $about = new About($merge->all());
-            $about->save();
-            return $about;
+            $service = new Service($merge->all());
+            $service->save();
+            return $service;
 
         }catch (QueryException $exception){
             throw  new InvalidArgumentException($exception->getMessage());
@@ -76,37 +71,37 @@ class AboutRepository extends BaseRepository implements AboutContract
      * @param array $params
      * @return mixed
      */
-    public function updateAbout(array $params)
+    public function updateService(array $params)
     {
-        $about = $this->findAboutById($params['id']);
-        $image = $about->image;
+        $service = $this->findServiceById($params['id']);
+        $image = $service->image;
 
         $collection = collect($params)->except('_token');
 
         if ($collection->has('image') && ($params['image'] instanceof UploadedFile)){
 
-            if($about->image !=null){
-                $this->deleteOne($about->image);
+            if($service->image !=null){
+                $this->deleteOne($service->image);
             }
 
-            $image = $this->uploadOne($params['image'],'abouts');
+            $image = $this->uploadOne($params['image'],'services');
         }
         $status    = $collection->has('status') ? 1 : 0 ;
         $merge = $collection->merge(compact('status','image'));
-        $about->update($merge->all());
+        $service->update($merge->all());
 
-        return $about;
+        return $service;
 
 
     }
 
-    public function deleteAbout(int $id)
+    public function deleteService(int $id)
     {
-        $about = $this->findAboutById($id);
-        if($about->image != null){
-            $this->deleteOne($about->image);
+        $service = $this->findServiceById($id);
+        if($service->image != null){
+            $this->deleteOne($service->image);
         }
-        $about->delete();
-        return $about;
+        $service->delete();
+        return $service;
     }
 }

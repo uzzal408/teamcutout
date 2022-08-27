@@ -23,6 +23,14 @@ Route::group(['middleware'=> 'auth'],function () {
         Route::get('/{id}/edit','App\Http\Controllers\Admin\AboutController@edit')->name('admin.abouts.edit');
         Route::post('update','App\Http\Controllers\Admin\AboutController@update')->name('admin.abouts.update');
         Route::get('/{id}/delete','App\Http\Controllers\Admin\AboutController@delete')->name('admin.abouts.delete');
+    });
 
+    Route::group(['prefix'=> 'services'],function (){
+        Route::get('/','App\Http\Controllers\Admin\ServiceController@index')->name('admin.services.index');
+        Route::get('/create','App\Http\Controllers\Admin\ServiceController@create')->name('admin.services.create');
+        Route::post('/store','App\Http\Controllers\Admin\ServiceController@store')->name('admin.services.store');
+        Route::get('/{id}/edit','App\Http\Controllers\Admin\ServiceController@edit')->name('admin.services.edit');
+        Route::post('update','App\Http\Controllers\Admin\ServiceController@update')->name('admin.services.update');
+        Route::get('/{id}/delete','App\Http\Controllers\Admin\ServiceController@delete')->name('admin.services.delete');
     });
 });

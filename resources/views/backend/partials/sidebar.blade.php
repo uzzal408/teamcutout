@@ -23,6 +23,13 @@
         </li>
 
         <li>
+            <a class="app-menu__item {{ Route::currentRouteName() == 'admin.services.index' ? 'active' : '' }}" href="{{ route('admin.services.index') }}">
+                <i class="app-menu__icon fa fa-won"></i>
+                <span class="app-menu__label">Services</span>
+            </a>
+        </li>
+
+        <li>
             <a class="app-menu__item {{ Route::currentRouteName() == 'admin.settings' ? 'active' : '' }}" href="{{ route('admin.settings') }}">
                 <i class="app-menu__icon fa fa-cogs"></i>
                 <span class="app-menu__label">Settings</span>
