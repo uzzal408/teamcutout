@@ -12,7 +12,7 @@
         <div class="col-md-9">
             <div class="tab-content">
                  <div class="tile">
-                    <form action="{{ route('admin.counters.update') }}" method="POST" role="form">
+                    <form action="{{ route('admin.counters.update') }}" method="POST" role="form" enctype="multipart/form-data">
                     @csrf
                     <h3 class="tile-title">Portfolio(Counter)</h3>
                     <hr>
@@ -50,6 +50,20 @@
                                         value="{{ config('settings.total_project') }}"
                                     />
                                 </div>
+                            <div class="col-3">
+                                @if (config('settings.counter_image') != null)
+                                    <img src="{{ asset('storage/'.config('settings.counter_image')) }}" id="logoImg" style="width: 80px; height: auto;">
+                                @else
+                                    <img src="https://via.placeholder.com/80x80?text=Placeholder+Image" id="logoImg" style="width: 80px; height: auto;">
+                                @endif
+                            </div>
+                            <div class="col-9">
+                                <div class="form-group">
+                                    <label class="control-label">Site Logo [Width: 180px, Height: 180px; File Size Maximum 20KB]</label>
+                                    <input class="form-control" type="file" name="counter_image" onchange="loadFile(event,'logoImg')" />
+                                </div>
+                            </div>
+                        </div>
                         </div>
                         <div class="tile-footer">
                             <div class="row d-print-none mt-2">

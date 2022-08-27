@@ -9,10 +9,8 @@
                             <livewire:inc.slider></livewire:inc.slider>
                             <livewire:inc.about></livewire:inc.about>
                             <livewire:inc.services></livewire:inc.services>
-{{--                            @include('frontend/include/about')--}}
-{{--                            @include('frontend/include/services')--}}
-{{--                            @include('frontend/include/portfolio')--}}
-                            @include('frontend/include/packageo')
+                            <livewire:inc.portfolio></livewire:inc.portfolio>
+{{--                            @include('frontend/include/packageo')--}}
                             <livewire:inc.packages></livewire:inc.packages>
 {{--                            @include('frontend/include/packagee')--}}
                             @include('frontend/include/payment')

@@ -19,11 +19,19 @@ class CounterController extends BaseController
 
     public function update(Request $request)
     {
-
         $keys = $request->except('_token');
-        foreach ($keys as $key => $value){
-                Settings::set($key,$value);
+        if($request->has('counter_image') && $request->file('counter_image') instanceof UploadedFile){
+            if(config('settings.counter_image')!=null){
+                $this->deleteOne(config('settings.counter_image'));
             }
+            $logo = $this->uploadOne($request->file('counter_image'),'img');
+            Settings::set('counter_image',$logo);
+
+        }else {
+            foreach ($keys as $key => $value) {
+                Settings::set($key, $value);
+            }
+        }
         return $this->responseRedirectBack('Portfolio updated successfully.','success');
     }
 }
