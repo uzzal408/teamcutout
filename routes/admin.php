@@ -46,4 +46,8 @@ Route::group(['middleware'=> 'auth'],function () {
     Route::get('counters', 'App\Http\Controllers\Admin\CounterController@index')->name('admin.counters');
     Route::post('counters', 'App\Http\Controllers\Admin\CounterController@update')->name('admin.counters.update');
 
+    Route::get('contents', 'App\Http\Controllers\Admin\ContentController@index')->name('admin.contents');
+    Route::post('contents', 'App\Http\Controllers\Admin\ContentController@update')->name('admin.contents.update');
+
+
 });
