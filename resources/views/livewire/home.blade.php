@@ -10,12 +10,9 @@
                             <livewire:inc.about></livewire:inc.about>
                             <livewire:inc.services></livewire:inc.services>
                             <livewire:inc.portfolio></livewire:inc.portfolio>
-{{--                            @include('frontend/include/packageo')--}}
                             <livewire:inc.packages></livewire:inc.packages>
-{{--                            @include('frontend/include/packagee')--}}
-                            @include('frontend/include/payment')
-{{--                            @include('frontend/include/contacta')--}}
-                            @include('frontend/include/contactb')
+                            <livewire:inc.payment></livewire:inc.payment>
+                            <livewire:inc.contact></livewire:inc.contact>
                         </div>
                     </div>
                 </div>

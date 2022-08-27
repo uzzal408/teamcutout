@@ -7,7 +7,7 @@
                         <div class="wpb_wrapper">
                             <div class="wpb_text_column wpb_content_element ">
                                 <div class="wpb_wrapper">
-                                    <h1>KEEP THE CLIENT DELIGHTED</h1>
+                                    <h1>{{ $title }}</h1>
                                 </div>
                             </div>
                             <div class="vc_empty_space"  style="height: 20px">
@@ -17,7 +17,7 @@
                             </div>
                             <div class="wpb_text_column wpb_content_element ">
                                 <div class="wpb_wrapper">
-                                    <h4>SkillGraphics is a Professional Image Post Production Company with its main studio located in Dhaka, Bangladesh (GMT+6). We provide services to help reduce the cost of image post-production for web shops/e-commerce, Photography, Fashion, Advertising and Digital Marketing Agencies, A pool of experienced professional is always ready to provide service for any Image Post Production.</h4>
+                                    <h4>{{ $desc }}</h4>
                                 </div>
                             </div>
                             <div class="vc_row wpb_row section vc_row-fluid vc_inner " style=' text-align:center;'>

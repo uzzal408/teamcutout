@@ -27,6 +27,40 @@
                 />
             </div>
             <div class="form-group">
+                <label class="control-label" for="social_youtube">Youtube Profile</label>
+                <input
+                    class="form-control"
+                    type="text"
+                    placeholder="Enter youtube profile link"
+                    id="social_youtube"
+                    name="social_youtube"
+                    value="{{ config('settings.social_youtube') }}"
+                />
+            </div>
+            <div class="form-group">
+                <label class="control-label" for="social_dropbox">Dropbox Profile</label>
+                <input
+                    class="form-control"
+                    type="text"
+                    placeholder="Enter dropbox profile link"
+                    id="social_dropbox"
+                    name="social_dropbox"
+                    value="{{ config('settings.social_dropbox') }}"
+                />
+            </div>
+
+            <div class="form-group">
+                <label class="control-label" for="social_skype">Skype Profile</label>
+                <input
+                    class="form-control"
+                    type="text"
+                    placeholder="Enter skype profile link"
+                    id="social_skype"
+                    name="social_skype"
+                    value="{{ config('settings.social_skype') }}"
+                />
+            </div>
+            <div class="form-group">
                 <label class="control-label" for="social_instagram">Instagram Profile</label>
                 <input
                         class="form-control"

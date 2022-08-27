@@ -11,7 +11,7 @@
                                         <div class='q_elements_item_content q_elements_holder_custom_783880' style='padding:107px 16% 70px'>
                                             <div class="wpb_text_column wpb_content_element ">
                                                 <div class="wpb_wrapper">
-                                                    <h1>Choose Your Perfect Package</h1>
+                                                    <h1>{{ $title }}</h1>
                                                 </div>
                                             </div>
                                             <div class="vc_empty_space"  style="height: 16px" >
@@ -21,7 +21,7 @@
                                             </div>
                                             <div class="wpb_text_column wpb_content_element ">
                                                 <div class="wpb_wrapper">
-                                                    <h4>Our production system has been built from the group up with large volume orders in mind. We use both automated and manual quality control systems, so rest assured that your images will turn out just as you wanted them.</h4>
+                                                    <h4>{{ $desc }}</h4>
                                                 </div>
                                             </div>
                                         </div>
