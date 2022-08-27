@@ -13,7 +13,8 @@
 {{--                            @include('frontend/include/services')--}}
 {{--                            @include('frontend/include/portfolio')--}}
                             @include('frontend/include/packageo')
-                            @include('frontend/include/packagee')
+                            <livewire:inc.packages></livewire:inc.packages>
+{{--                            @include('frontend/include/packagee')--}}
                             @include('frontend/include/payment')
 {{--                            @include('frontend/include/contacta')--}}
                             @include('frontend/include/contactb')
