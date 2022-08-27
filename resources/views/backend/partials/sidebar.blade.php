@@ -35,6 +35,12 @@
                 <span class="app-menu__label">Packages</span>
             </a>
         </li>
+        <li>
+            <a class="app-menu__item {{ Route::currentRouteName() == 'admin.counters' ? 'active' : '' }}" href="{{ route('admin.counters') }}">
+                <i class="app-menu__icon fa fa-cab"></i>
+                <span class="app-menu__label">Portfolio</span>
+            </a>
+        </li>
 
         <li>
             <a class="app-menu__item {{ Route::currentRouteName() == 'admin.settings' ? 'active' : '' }}" href="{{ route('admin.settings') }}">

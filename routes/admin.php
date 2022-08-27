@@ -42,4 +42,8 @@ Route::group(['middleware'=> 'auth'],function () {
         Route::post('update','App\Http\Controllers\Admin\PackageController@update')->name('admin.packages.update');
         Route::get('/{id}/delete','App\Http\Controllers\Admin\PackageController@delete')->name('admin.packages.delete');
     });
+
+    Route::get('counters', 'App\Http\Controllers\Admin\CounterController@index')->name('admin.counters');
+    Route::post('counters', 'App\Http\Controllers\Admin\CounterController@update')->name('admin.counters.update');
+
 });

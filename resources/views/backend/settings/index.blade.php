@@ -1,7 +1,5 @@
 @extends('backend.app')
-
 @section('title') {{ $pageTitle }} @endsection
-
 @section('content')
     <div class="app-title">
         <div>
