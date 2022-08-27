@@ -32,8 +32,9 @@ class AboutController extends BaseController
 
     public function store(Request $request){
         $this->validate($request,[
-            'title'          => 'required|max:191',
+            'title'         => 'required|max:191',
             'desc'          => 'required|max:191',
+            'sorting'       => 'required|numeric',
             'image'         =>  'nullable|mimes:jpg,jpeg,png,webp,gif,svg|max:1000'
         ]);
 
@@ -68,8 +69,9 @@ class AboutController extends BaseController
     public function update(Request $request){
 
         $this->validate($request,[
-            'title'          => 'required|max:191',
+            'title'         => 'required|max:191',
             'desc'          => 'required|max:191',
+            'sorting'       => 'required|numeric',
             'image'         =>  'nullable|mimes:jpg,jpeg,png,webp,gif,svg|max:1000'
         ]);
 

@@ -8,8 +8,9 @@
                         <div class="container_inner default_template_holder clearfix page_container_inner" >
                             <livewire:inc.slider></livewire:inc.slider>
                             <livewire:inc.about></livewire:inc.about>
+                            <livewire:inc.services></livewire:inc.services>
 {{--                            @include('frontend/include/about')--}}
-                            @include('frontend/include/services')
+{{--                            @include('frontend/include/services')--}}
 {{--                            @include('frontend/include/portfolio')--}}
                             @include('frontend/include/packageo')
                             @include('frontend/include/packagee')
