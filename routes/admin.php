@@ -33,4 +33,13 @@ Route::group(['middleware'=> 'auth'],function () {
         Route::post('update','App\Http\Controllers\Admin\ServiceController@update')->name('admin.services.update');
         Route::get('/{id}/delete','App\Http\Controllers\Admin\ServiceController@delete')->name('admin.services.delete');
     });
+
+    Route::group(['prefix'=> 'packages'],function (){
+        Route::get('/','App\Http\Controllers\Admin\PackageController@index')->name('admin.packages.index');
+        Route::get('/create','App\Http\Controllers\Admin\PackageController@create')->name('admin.packages.create');
+        Route::post('/store','App\Http\Controllers\Admin\PackageController@store')->name('admin.packages.store');
+        Route::get('/{id}/edit','App\Http\Controllers\Admin\PackageController@edit')->name('admin.packages.edit');
+        Route::post('update','App\Http\Controllers\Admin\PackageController@update')->name('admin.packages.update');
+        Route::get('/{id}/delete','App\Http\Controllers\Admin\PackageController@delete')->name('admin.packages.delete');
+    });
 });

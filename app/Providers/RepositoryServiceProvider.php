@@ -3,8 +3,10 @@
 namespace App\Providers;
 
 use App\Contracts\AboutContract;
+use App\Contracts\ServiceContract;
 use App\Contracts\SliderContract;
 use App\Repositories\AboutRepository;
+use App\Repositories\ServiceRepository;
 use App\Repositories\SliderRepository;
 use Illuminate\Support\ServiceProvider;
 
@@ -19,6 +21,7 @@ class RepositoryServiceProvider extends ServiceProvider
     protected $repositories = [
         SliderContract::class => SliderRepository::class,
         AboutContract::class  => AboutRepository::class,
+        ServiceContract::class => ServiceRepository::class,
     ];
     public function register()
     {

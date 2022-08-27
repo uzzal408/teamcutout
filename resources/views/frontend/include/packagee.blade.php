@@ -11,20 +11,19 @@
                                         <div class="wpb_text_column wpb_content_element ">
                                             <div class="wpb_wrapper">
                                                 <h1>Choose Your Perfect Package</h1>
-
                                             </div>
-                                        </div> 	<div class="vc_empty_space"  style="height: 16px" ><span
-                                                class="vc_empty_space_inner">
-			<span class="empty_space_image"  ></span>
-		</span></div>
-
-
+                                        </div>
+                                        <div class="vc_empty_space"  style="height: 16px" >
+                                            <span class="vc_empty_space_inner">
+                                                <span class="empty_space_image" ></span>
+                                            </span>
+                                        </div>
                                         <div class="wpb_text_column wpb_content_element ">
                                             <div class="wpb_wrapper">
                                                 <h4>Our production system has been built from the group up with large volume orders in mind. We use both automated and manual quality control systems, so rest assured that your images will turn out just as you wanted them.</h4>
-
                                             </div>
-                                        </div> </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -46,21 +45,58 @@
                                             <p>Pick Our Standard</p>
                                             <p>delivery option with no</p>
                                             <p>extra charge.</p>
-                                            <p>&nbsp;</p>
-                                            <p>.</li><li class='price_button'><a itemprop='url' class='qbutton white medium' href='#' target='_self'>Get Started</a></li></ul></div></div><div class='q_price_table '><div class='price_table_inner'><ul><li class='cell table_title'><h3 class='title_content'>Express</h3><li class='prices'><div class='price_in_table'><sup class='value'>.</sup><span class='price'>12</span><span class='mark'>Hour</span></div></li><li class='pricing_table_content'>Up to 500 images.</p>
+                                        </li>
+                                        <li class='price_button'>
+                                            <a itemprop='url' class='qbutton white medium' href='#' target='_self'>Get Started</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class='q_price_table '>
+                                <div class='price_table_inner'>
+                                    <ul>
+                                        <li class='cell table_title'>
+                                            <h3 class='title_content'>Express</h3>
+                                        <li class='prices'>
+                                            <div class='price_in_table'>
+                                                <sup class='value'>.</sup>
+                                                <span class='price'>12</span>
+                                                <span class='mark'>Hour</span>
+                                            </div>
+                                        </li>
+                                        <li class='pricing_table_content'>Up to 500 images.</p>
                                             <p>&nbsp;</p>
                                             <p>Pick Our Express</p>
                                             <p>delivery option with 50%</p>
                                             <p>additional charge.</p>
-                                            <p>&nbsp;</p>
-                                            <p>.</li><li class='price_button'><a itemprop='url' class='qbutton white medium' href='#' target='_self'>Get Started</a></li></ul></div></div><div class='q_price_table '><div class='price_table_inner'><ul><li class='cell table_title'><h3 class='title_content'>Urgent</h3><li class='prices'><div class='price_in_table'><sup class='value'>.</sup><span class='price'>6</span><span class='mark'>Hour</span></div></li><li class='pricing_table_content'>Up to 100 images.</p>
+                                        </li>
+                                        <li class='price_button'><a itemprop='url' class='qbutton white medium' href='#' target='_self'>Get Started</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class='q_price_table '>
+                                <div class='price_table_inner'>
+                                    <ul>
+                                        <li class='cell table_title'>
+                                            <h3 class='title_content'>Urgent</h3>
+                                        <li class='prices'>
+                                            <div class='price_in_table'>
+                                                <sup class='value'>.</sup>
+                                                <span class='price'>6</span>
+                                                <span class='mark'>Hour</span>
+                                            </div>
+                                        </li>
+                                        <li class='pricing_table_content'>Up to 100 images.
+                                            </p>
                                             <p>&nbsp;</p>
                                             <p>Pick Our Urgent</p>
                                             <p>delivery option with 100%</p>
                                             <p>additional charge.</p>
-                                            <p>&nbsp;</p>
-                                            <p>.</li>
-                                        <li class='price_button'><a itemprop='url' class='qbutton white medium' href='#' target='_self'>Get Started</a></li>
+                                        </li>
+                                        <li class='price_button'>
+                                            <a itemprop='url' class='qbutton white medium' href='#' target='_self'>Get Started</a>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
