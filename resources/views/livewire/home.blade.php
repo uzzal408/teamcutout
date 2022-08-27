@@ -1,7 +1,7 @@
 <div>
     <div class="wrapper">
         <div class="wrapper_inner">
-            @include('frontend/include/nav')
+            <livewire:inc.nav></livewire:inc.nav>
             <div class="content content_top_margin">
                 <div class="content_inner">
                     <div class="container" style='background-color:#ffffff'>
