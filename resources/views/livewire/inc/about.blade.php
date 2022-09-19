@@ -30,7 +30,8 @@
                                                 <div class='q_icon_with_title medium custom_icon_image center qode_iwt_hover_enabled'>
                                                     <div class="icon_holder " style=" ">
                                                         <img itemprop="image" style="" src="{{ asset('storage/'.$about['image']) }}" alt="">
-                                                    </div><div class="icon_text_holder" style="">
+                                                    </div>
+                                                    <div class="icon_text_holder" style="">
                                                         <div class="icon_text_inner" style="">
                                                             <h3 class="icon_title" style="color: #bb009b;">{{ $about['title'] }}</h3>
                                                             <p style=''>{{ $about['desc'] }}</p>

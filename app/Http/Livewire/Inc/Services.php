@@ -9,7 +9,7 @@ class Services extends Component
 {
     public $services = [];
     public function mount(){
-        $serv = Service::where('status',1)->orderBy('sorting','asc')->get();
+        $serv = Service::where('status',1)->orderBy('sorting','asc')->limit(6)->get();
         if($serv){
             $this->services = $serv->toArray();
         }
