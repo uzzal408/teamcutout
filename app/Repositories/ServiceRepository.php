@@ -51,12 +51,16 @@ class ServiceRepository extends BaseRepository implements ServiceContract
         try{
             $collection = collect($params);
             $image = null;
+            $before_image = null;
 
             if($collection->has('image') && ($params['image'] instanceof UploadedFile)){
                 $image = $this->uploadOne($params['image'],'services');
             }
+            if($collection->has('before_image') && ($params['before_image'] instanceof UploadedFile)){
+                $before_image = $this->uploadOne($params['before_image'],'services');
+            }
             $status   = $collection->has('status') ? 1 : 0 ;
-            $merge = $collection->merge(compact('image','status'));
+            $merge = $collection->merge(compact('image','before_image','status'));
             $service = new Service($merge->all());
             $service->save();
             return $service;
@@ -75,6 +79,7 @@ class ServiceRepository extends BaseRepository implements ServiceContract
     {
         $service = $this->findServiceById($params['id']);
         $image = $service->image;
+        $before_image = $service->before_image;
 
         $collection = collect($params)->except('_token');
 
@@ -86,8 +91,16 @@ class ServiceRepository extends BaseRepository implements ServiceContract
 
             $image = $this->uploadOne($params['image'],'services');
         }
+        if ($collection->has('before_image') && ($params['before_image'] instanceof UploadedFile)){
+
+            if($service->before_image !=null){
+                $this->deleteOne($service->before_image);
+            }
+
+            $before_image = $this->uploadOne($params['before_image'],'services');
+        }
         $status    = $collection->has('status') ? 1 : 0 ;
-        $merge = $collection->merge(compact('status','image'));
+        $merge = $collection->merge(compact('status','image','before_image'));
         $service->update($merge->all());
 
         return $service;
@@ -100,6 +113,9 @@ class ServiceRepository extends BaseRepository implements ServiceContract
         $service = $this->findServiceById($id);
         if($service->image != null){
             $this->deleteOne($service->image);
+        }
+        if($service->before_image != null){
+            $this->deleteOne($service->before_image);
         }
         $service->delete();
         return $service;

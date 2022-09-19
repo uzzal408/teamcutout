@@ -38,7 +38,7 @@
 
                         <div class="form-group">
                             <div class="row">
-                                <div class="col-md-12" id="dropzone">
+                                <div class="col-md-12">
                                     <div>Image</div>
                                     <input class="form-control @error('image') is-invalid @enderror" type="file" id="image" name="image"/>
                                     @error('image') {{ $message }} @enderror
@@ -55,7 +55,25 @@
                             </div>
                         </div>
                     </div>
-            </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div>Image (Before)</div>
+                                <input class="form-control @error('before_image') is-invalid @enderror" type="file" id="before_image" name="before_image"/>
+                                @error('before_image') {{ $message }} @enderror
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                @if ($t_service->before_image != null)
+                                    <figure class="mt-2" style="width: 80px; height: auto;">
+                                        <img src="{{ asset('storage/'.$t_service->before_image) }}" id="before_image" class="img-fluid" alt="img">
+                                    </figure>
+                                @endif
+                            </div>
+                        </div>
+                    </div>
+{{--            </div>--}}
             <div class="tile-footer">
                 <button class="btn btn-primary" type="submit"><i class="fa fa-fw fa-lg fa-check-circle"></i>Save</button>
                 &nbsp;&nbsp;&nbsp;

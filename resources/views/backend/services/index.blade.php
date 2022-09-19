@@ -17,7 +17,8 @@
                         <thead>
                         <tr>
                             <th> # </th>
-                            <th>Image</th>
+                            <th>Image (After)</th>
+                            <th>Image (Before)</th>
                             <th>Title</th>
                             <th>Sorting</th>
                             <th class="text-center">Status</th>
@@ -29,6 +30,7 @@
                             <tr>
                                 <td>{{ ++$key }}</td>
                                 <td><img src="{{ asset('storage/'.$service->image) }}" width="80"></td>
+                                <td><img src="{{ asset('storage/'.$service->before_image) }}" width="80"></td>
                                 <td>{{ $service->title }}</td>
                                 <td>{{ $service->sorting }}</td>
                                 <td class="text-center">

@@ -38,8 +38,8 @@
                                         <div class="col-md-4">
                                             <div class='container_1'>
                                                 <div class="compare compare_{{$sl}}">
-                                                    <div class="before" style="position: relative; top: 0px; width: 100%; height: 100%; background: url('{{ asset('frontend/uploads/image_one.jpg') }}'); background-repeat: no-repeat">
-                                                        <div class="after" style="position: absolute; top: 0px;left: 0px; width: 140px;height: 220px;  background: url('{{ asset('frontend/uploads/image_two.jpg') }}'); background-repeat: no-repeat; z-index: 2;"></div>
+                                                    <div class="before" style="position: relative; top: 0px; width: 100%; height: 100%; background: url('{{ asset('storage/'.$service['image']) }}'); background-repeat: no-repeat">
+                                                        <div class="after" style="position: absolute; top: 0px;left: 0px; width: 140px;height: 220px;  background: url('{{ asset('storage/'.$service['before_image']) }}'); background-repeat: no-repeat; z-index: 2;"></div>
                                                     </div>
                                                     <input type="range" min="0" max="500px" value="50"  id="compare-id_{{ $sl }}">
                                                 </div>
@@ -187,13 +187,5 @@
             document.querySelector(".compare_{{ $sl }} .before .after")
                 .style.width = (+e.target.value) + "%";
     });
-    // document.querySelector(".compare_2 #compare-id_2").addEventListener("input", function (e){
-    //     document.querySelector(".compare_2 .before .after")
-    //         .style.width = (+e.target.value) + "%";
-    // });
-    // document.querySelector(".compare_3 #compare-id_3").addEventListener("input", function (e){
-    //     document.querySelector(".compare_3 .before .after")
-    //         .style.width = (+e.target.value) + "%";
-    // });
 </script>
 @endforeach

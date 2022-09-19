@@ -40,10 +40,17 @@
                         </div>
 
                         <div class="row">
-                            <div class="col-md-12" id="dropzone">
-                                <div>Image</div>
+                            <div class="col-md-12">
+                                <div>Image After</div>
                                 <input class="form-control @error('image') is-invalid @enderror" type="file" id="image" name="image"/>
                                 @error('image') {{ $message }} @enderror
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div>Image (Before)</div>
+                                <input class="form-control @error('before_image') is-invalid @enderror" type="file" id="before_image" name="image"/>
+                                @error('before_image') {{ $message }} @enderror
                             </div>
                         </div>
                     </div>
