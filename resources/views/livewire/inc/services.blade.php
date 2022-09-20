@@ -12,19 +12,14 @@
                                         <div class='q_elements_item_content q_elements_holder_custom_783880' style='padding:107px 16% 70px'>
                                             <div class="wpb_text_column wpb_content_element ">
                                                 <div class="wpb_wrapper">
-                                                    <h1>Title</h1>
+                                                    <h1>Check Out Our Services</h1>
                                                 </div>
                                             </div>
-                                            <div class="vc_empty_space"  style="height: 16px" >
-                                            <span class="vc_empty_space_inner">
-                                                <span class="empty_space_image" ></span>
-                                            </span>
-                                            </div>
-                                            <div class="wpb_text_column wpb_content_element ">
-                                                <div class="wpb_wrapper">
-                                                    <h4>DEsc</h4>
-                                                </div>
-                                            </div>
+{{--                                            <div class="vc_empty_space"  style="height: 16px" >--}}
+{{--                                            <span class="vc_empty_space_inner">--}}
+{{--                                                <span class="empty_space_image" ></span>--}}
+{{--                                            </span>--}}
+{{--                                            </div>--}}
                                         </div>
                                     </div>
                                 </div>
@@ -39,13 +34,13 @@
                                             <div class='container_1'>
                                                 <div class="compare compare_{{$sl}}">
                                                     <div class="before" style="position: relative; top: 0px; width: 100%; height: 100%; background: url('{{ asset('storage/'.$service['image']) }}'); background-repeat: no-repeat">
-                                                        <div class="after" style="position: absolute; top: 0px;left: 0px; width: 140px;height: 220px;  background: url('{{ asset('storage/'.$service['before_image']) }}'); background-repeat: no-repeat; z-index: 2;"></div>
+                                                        <div class="after" style="position: absolute; top: 0px;left: 0px; width: 165px;height: 220px;  background: url('{{ asset('storage/'.$service['before_image']) }}'); background-repeat: no-repeat; z-index: 2;"></div>
                                                     </div>
                                                     <input type="range" min="0" max="500px" value="50"  id="compare-id_{{ $sl }}">
                                                 </div>
                                             </div>
                                             <br>
-                                            <h1>Test</h1>
+                                            <h1 style="margin-top: 30px;">{{ $service['title'] }}</h1>
                                         </div>
                                     @endforeach
                                     </div>
@@ -121,6 +116,7 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%,-50%);
+        margin-left: -10px;
     }
 
     .container_1 .title{
