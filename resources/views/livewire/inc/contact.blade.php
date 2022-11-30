@@ -72,6 +72,36 @@
                                         </div>
                                     </div>
                                 </div>
+
+                                <div class="wpb_column vc_column_container vc_col-sm-1/5">
+                                    <div class="vc_column-inner">
+                                        <div class="wpb_wrapper">
+                                            <span class='q_social_icon_holder circle_social' data-color=#0a90c9 data-hover-color=#ffffff>
+                                                 <a itemprop='url' href='//{{ $dropbox }}' target='_blank'>
+                                                <span class='fa-stack fa-lg' style=''>
+                                                    <i class="qode_icon_font_awesome fa fa-instagram" style="color: #0a90c9;" >
+                                                    </i>
+                                                </span>
+                                                 </a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="wpb_column vc_column_container vc_col-sm-1/5">
+                                    <div class="vc_column-inner">
+                                        <div class="wpb_wrapper">
+                                            <span class='q_social_icon_holder circle_social' data-color=#0a90c9 data-hover-color=#ffffff>
+                                                 <a itemprop='url' href='//{{ $dropbox }}' target='_blank'>
+                                                <span class='fa-stack fa-lg' style=''>
+                                                    <i class="qode_icon_font_awesome fa fa-whatsapp" style="color: #0a90c9;" >
+                                                    </i>
+                                                </span>
+                                                 </a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="wpb_column vc_column_container vc_col-sm-1/5">
                                     <div class="vc_column-inner">
                                         <div class="wpb_wrapper">

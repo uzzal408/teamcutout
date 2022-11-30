@@ -43,7 +43,8 @@
                                                     <span class='mark' style="background: #262626">{{ $package['price_time'] }}</span>
                                                 </div>
                                             </li>
-                                            <li class='pricing_table_content'>{{ $package['title'] }}</p>
+                                            <li class='pricing_table_content'>
+                                            <h3 class='title_content'><b style="color: white">{{ $package['title'] }}</b></h3>
                                                 <p>&nbsp;</p>
                                                 <p>{{ $package['line_one'] }}</p>
                                             </li>

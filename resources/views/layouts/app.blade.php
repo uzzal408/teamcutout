@@ -16,10 +16,28 @@
     <link rel='stylesheet' id='bridge-style-dynamic-responsive-css'  href={{ asset('frontend/themes/bridge/css/style_dynamic_responsivee6f2.css?ver=1586272495') }} type='text/css' media='all' />
     <link rel='stylesheet' id='js_composer_front-css'  href={{ asset('frontend/plugins/js_composer/assets/css/js_composer.min9b2d.css?ver=6.1') }} type='text/css' media='all' />
     <script type='text/javascript' src="{{ asset('frontend/js/jquery/jqueryb8ff.js?ver=1.12.4') }}"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    @livewireStyles
 <body class="home page page-id-294 page-template-default bridge-core-2.0.9  qode-title-hidden qode-theme-ver-19.6 qode-theme-bridge disabled_footer_top disabled_footer_bottom qode_header_in_grid wpb-js-composer js-comp-ver-6.1 vc_responsive">
-    {{ $slot }}
 
+<div class="wrapper">
+    <div class="wrapper_inner">
+        <livewire:inc.nav></livewire:inc.nav>
+        <div class="content">
+            <div class="content_inner">
+                <div class="container" style='background-color:#ffffff'>
+                    <div class="" >
+                        {{ $slot }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
+<!-- Modal -->
+<livewire:price-query></livewire:price-query>
 <script type='text/javascript' src="{{ asset('frontend/themes/bridge/js/plugins/jquery.appear8fc0.js?ver=4.6.23') }}"></script>
 <script type='text/javascript' src="{{ asset('frontend/themes/bridge/js/plugins/jquery.prettyPhoto8fc0.js?ver=4.6.23') }}"></script>
 <script type='text/javascript' src="{{ asset('frontend/themes/bridge/js/default_dynamice6f2.js?ver=1586272495') }}"></script>
@@ -29,6 +47,15 @@
 <script src="{{ asset('frontend/carousel/js/bootstrap.min.js') }}"></script>
 <script src="{{ asset('frontend/carousel/js/owl.carousel.min.js') }}"></script>
 <script src="{{ asset('frontend/carousel/js/main.js') }}"></script>
+@livewireScripts
+
+{{-- chatbot--}}
+<script type="text/javascript" src="https://popupsmart.com/freechat.js"></script><script> window.start.init({ title: "Hi There ✌️", message: "How may we help you? Just send us a message now to get assistance.", color: "#1C86FA", position: "right", placeholder: "Enter your message", withText: "Write with", viaWhatsapp: "Or write us directly via Whatsapp", gty: "Go to your", awu: "and write us", connect: "Connect now", button: "Write us", device: "everywhere", logo: "https://d2r80wdbkwti6l.cloudfront.net/TgTQDuQQ0796hbV8CV1LB8EseC2kxbcL.jpg", person: "https://d2r80wdbkwti6l.cloudfront.net/TjSNGiaQAimfHkyQ530g9dIUNMPxr8nU.jpg", services: [{"name":"whatsapp","content":"+8801933614215"}]})</script>
+
+
+{{--<script type="text/javascript" src="https://popupsmart.com/freechat.js"></script><script> window.start.init({ title: "Hi There ✌️", message: "How may we help you? Just send us a message now to get assistance.", color: "#1C86FA", position: "right", placeholder: "Enter your message", withText: "Write with", viaWhatsapp: "Or write us directly via Whatsapp", gty: "Go to your", awu: "and write us", connect: "Connect now",  button: "Write us", device: "everywhere", logo: "https://d2r80wdbkwti6l.cloudfront.net/TgTQDuQQ0796hbV8CV1LB8EseC2kxbcL.jpg", person: "https://d2r80wdbkwti6l.cloudfront.net/TjSNGiaQAimfHkyQ530g9dIUNMPxr8nU.jpg",  services: [{"name":"messenger","content":"2763093200465339"}]})</script>--}}
+
+
 <script>
     $(document).ready(function(){
         var sectionIds = $('a.menu-item');
@@ -54,6 +81,23 @@
 
 
     });
+</script>
+
+<script>
+    window.addEventListener('alert', event => {
+        toastr[event.detail.type](event.detail.message,
+            event.detail.title ?? ''), toastr.options = {
+            "closeButton": true,
+            "progressBar": true,
+        }
+    });
+</script>
+<script>
+    window.addEventListener('modal', event => {
+        (function($){
+            $('#exampleModalCenter').modal('hide');
+        })(jQuery);
+    })
 </script>
 </body>
 
