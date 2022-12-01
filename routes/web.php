@@ -14,10 +14,6 @@ use Illuminate\Support\Facades\Route;
 */
 require 'admin.php';
 Route::get('/','App\Http\Livewire\Home');
-Route::get('/chat','App\Http\Livewire\PriceQuery');
-//Route::get('/', function () {
-//    return view('welcome');
-//});
 
 Auth::routes();
 

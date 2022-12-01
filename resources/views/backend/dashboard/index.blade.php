@@ -44,4 +44,49 @@
             </div>
         </div>
     </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="tile">
+                <div class="tile-body">
+                    <table class="table table-hover table-bordered" id="sampleTable">
+                        <thead>
+                        <tr>
+                            <th> # </th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Message</th>
+                            <th class="text-center">Is Contacted?</th>
+                            <th class="text-center">Action?</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        @foreach($queries as $key=>$qr)
+                            <tr>
+                                <td>{{ ++$key }}</td>
+                                <td>{{ $qr->name }}</td>
+                                <td>{{ $qr->email }}</td>
+                                <td>{{ $qr->message }}</td>
+                                <td class="text-center">
+                                    @if ($qr->is_contacted == 1)
+                                        <span class="badge badge-success">Yes</span>
+                                    @else
+                                        <span class="badge badge-danger">No</span>
+                                    @endif
+                                </td>
+                                <td class="text-center">
+                                    <div class="btn-group" role="group" aria-label="Second group">
+{{--                                        <a href="{{ route('admin.packages.edit', $package->id) }}" class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></a>--}}
+                                        <a onclick="return confirm('Are you sure, you contact?')" href="{{ route('admin.contacted', $qr->id) }}" class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></a>
+                                    </div>
+                                </td>
+                            </tr>
+                        @endforeach
+                        </tbody>
+                    </table>
+                    {{ $queries->links() }}
+                </div>
+            </div>
+        </div>
+    </div>
 @endsection
