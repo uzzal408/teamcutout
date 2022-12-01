@@ -15,7 +15,10 @@ class Contact extends Component
     public $youtube;
     public $linkedin;
     public $dropbox;
+    public $instagram;
+    public $whatsapp;
     public $copywrite;
+
     public function mount(){
         $this->name = config('settings.site_name');
         $this->email = config('settings.default_email_address');
@@ -28,6 +31,8 @@ class Contact extends Component
         $this->linkedin = config('settings.social_linkedin');
         $this->dropbox = config('settings.social_dropbox');
         $this->skype = config('settings.social_skype');
+        $this->instagram = config('settings.social_instagram');
+        $this->whatsapp = config('settings.social_twitter');
 
         $this->copywrite = config('settings.footer_copyright_text');
     }

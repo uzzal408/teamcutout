@@ -16,11 +16,11 @@
                 />
             </div>
             <div class="form-group">
-                <label class="control-label" for="social_twitter">Twitter Profile</label>
+                <label class="control-label" for="social_twitter">Whatsapp Profile</label>
                 <input
                         class="form-control"
                         type="text"
-                        placeholder="Enter twitter profile link"
+                        placeholder="Enter whatsapp profile link"
                         id="social_twitter"
                         name="social_twitter"
                         value="{{ config('settings.social_twitter') }}"

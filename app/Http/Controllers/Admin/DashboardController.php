@@ -12,4 +12,13 @@ class DashboardController extends Controller
         $queries = PriceQuery::orderBy('id','desc')->paginate(20);
         return view('backend.dashboard.index',compact('queries'));
     }
+
+    public function contacted($id){
+        $query = PriceQuery::find($id);
+        if($query){
+            $query->is_conducted = 1;
+            $query->save();
+        }
+        return back();
+    }
 }

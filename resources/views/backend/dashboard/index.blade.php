@@ -68,7 +68,7 @@
                                 <td>{{ $qr->email }}</td>
                                 <td>{{ $qr->message }}</td>
                                 <td class="text-center">
-                                    @if ($qr->is_contacted == 1)
+                                    @if ($qr->is_conducted == 1)
                                         <span class="badge badge-success">Yes</span>
                                     @else
                                         <span class="badge badge-danger">No</span>

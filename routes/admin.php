@@ -5,7 +5,7 @@ Route::group(['middleware'=> 'auth'],function () {
 //    });
 
     Route::get('home', 'App\Http\Controllers\Admin\DashboardController@index')->name('admin.home');
-    Route::get('contacted', 'App\Http\Controllers\Admin\DashboardController@contaced')->name('admin.contacted');
+    Route::get('contacted/{id}', 'App\Http\Controllers\Admin\DashboardController@contacted')->name('admin.contacted');
 
     Route::get('settings', 'App\Http\Controllers\Admin\SettingController@index')->name('admin.settings');
     Route::post('settings', 'App\Http\Controllers\Admin\SettingController@update')->name('admin.settings.update');
