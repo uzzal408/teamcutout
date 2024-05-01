@@ -13,14 +13,44 @@
     <link rel="stylesheet" href="{{ asset('frontend/carousel/css/style.css') }}">
     <link rel='stylesheet' id='bridge-stylesheet-css'  href="{{ asset('frontend/themes/bridge/css/stylesheet.min8fc0.css?ver=4.6.23') }}" type='text/css' media='all' />
     <link rel='stylesheet' id='bridge-responsive-css'  href={{ asset('frontend/themes/bridge/css/responsive.min8fc0.css?ver=4.6.23') }} type='text/css' media='all' />
+    <link rel='stylesheet' href={{ asset('frontend/css/8x8y.css') }} type='text/css' media='all' />
+    <link rel='stylesheet' href={{ asset('frontend/css/post.css') }} type='text/css' media='all' />
     <link rel='stylesheet' id='bridge-style-dynamic-responsive-css'  href={{ asset('frontend/themes/bridge/css/style_dynamic_responsivee6f2.css?ver=1586272495') }} type='text/css' media='all' />
     <link rel='stylesheet' id='js_composer_front-css'  href={{ asset('frontend/plugins/js_composer/assets/css/js_composer.min9b2d.css?ver=6.1') }} type='text/css' media='all' />
     <script type='text/javascript' src="{{ asset('frontend/js/jquery/jqueryb8ff.js?ver=1.12.4') }}"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     @livewireStyles
-<body class="home page page-id-294 page-template-default bridge-core-2.0.9  qode-title-hidden qode-theme-ver-19.6 qode-theme-bridge disabled_footer_top disabled_footer_bottom qode_header_in_grid wpb-js-composer js-comp-ver-6.1 vc_responsive">
+    <style>
+        body, html {
+            margin: 0!important;
+            padding: 0!important;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .container {
+            width: 100%!important;
+        }
+        .header_bottom{
+            background: #FFC312;!important;
+        }
+        .running-text {
+            width: fit-content; /* Adjust width as needed */
+            overflow: hidden;
+            white-space: nowrap;
+            animation: run 5s linear infinite;
+        }
 
+        @keyframes run {
+            100% {
+                transform: translateX(-100%); /* Move text to the left */
+            }
+        }
+    </style>
+<body class="home page page-id-294 page-template-default bridge-core-2.0.9  qode-title-hidden qode-theme-ver-19.6 qode-theme-bridge disabled_footer_top disabled_footer_bottom qode_header_in_grid wpb-js-composer js-comp-ver-6.1 vc_responsive">
 <div class="wrapper">
     <div class="wrapper_inner">
         <livewire:inc.nav></livewire:inc.nav>
